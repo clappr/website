@@ -1,0 +1,265 @@
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+#header {
+  position: relative;
+}
+
+#header .info {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  margin-left: 50%;
+}
+
+#header .info h2 {
+  color: #FFF;
+  font-size: 15px;
+  font-family: 'Roboto Condensed';
+  letter-spacing: 3px;
+}
+
+#header .info .logo {
+  width: 70%;
+  min-width: 50%;
+}
+
+#header .info .intro {
+  width: 230px;
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: 10%;
+}
+
+/* PLAYER */
+
+#player-container {
+  text-align: center;
+  background-color: #000;
+  color: #FFF;
+  height: 600px;
+  padding: 10% 0;
+}
+
+#player-container .info {
+  color: #FFF;
+  width: 25%;
+  display: inline-block;
+  text-align: left;
+  margin-right: 10%;
+}
+
+#player-container .info  h2 {
+  width: 260px;
+  font-size: 40px;
+  font-family: 'Roboto Condensed';
+  margin: 0;
+}
+
+#player-container .info p {
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: 10%;
+}
+
+#player-container .player {
+  display: inline-block;
+  background: red;
+  width: 450px;
+  height: 300px;
+}
+
+/* LAYERS */
+
+#layers {
+  position: relative;
+}
+
+#layers .shape {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  background-color: #FFF;
+  top: -100px;
+  -webkit-transform: skewy(-8deg);
+  -moz-transform: skewy(-8deg);
+  -o-transform: skewy(-8deg);
+  -ms-transform: skewy(-8deg);
+  z-index: 1;
+}
+
+#layers .layers-container {
+  background-color: #FFF;
+  z-index: 2;
+  position: absolute;
+}
+
+#layers .left {
+  float: left;
+  width: 41.66666667%;
+}
+
+#layers .right {
+  float: left;
+  width: 58.33333333%;
+  position: relative;
+}
+
+#layers .right .perspective-1 {
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  position: absolute;
+  top: 0px;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+#layers .right .perspective-1.perspective-transition {
+  top: -60px;
+}
+
+#layers .right .perspective-2 {
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  position: absolute;
+  opacity: 0.3;
+  z-index: 2;
+  top: 30px;
+}
+
+#layers .right .perspective-2.perspective-transition {
+  top: 100px;
+}
+
+#layers .right .perspective-3 {
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+}
+
+#layers .right .perspective-3.perspective-transition {
+  top: 200px;
+}
+
+#layers .info {
+  padding: 0 40px;
+  margin-bottom: 10px;
+}
+
+#layers .info .label {
+  width: 260px;
+  font-size: 40px;
+  font-family: 'Roboto Condensed';
+  margin: 0;
+}
+
+#layers .info p {
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: 10%;
+}
+
+/* DEVICES */
+#devices {
+  position: relative;
+  background-color: #000;
+  color: #FFF;
+  margin-top: 10%;
+}
+
+#devices .info {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+#devices .info h2 {
+  width: 260px;
+  font-size: 40px;
+  font-family: 'Roboto Condensed';
+  margin: 0;
+}
+
+#plugins {
+  position: relative;
+  text-align: center;
+  background-color: #FFF;
+  color: #FFF;
+  height: 600px;
+  padding: 10% 0;
+}
+
+#plugins .clappr-plugin-left {
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+  top: 21%;
+  left: -10%;
+  position: absolute;
+  width: 10%;
+}
+
+#plugins .clappr-plugin-left.clappr-transition {
+  left: 14%;
+}
+
+#plugins .clappr-plugin-right {
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+  top: 21%;
+  right: -10%;
+  position: absolute;
+  width: 10%;
+}
+
+#plugins .clappr-plugin-right.clappr-transition {
+  right: 39%;
+}
+
+#plugins .left {
+  float: left;
+  width: 75%;
+}
+
+#plugins .right {
+  float: left;
+  width: 25%;
+  color: #000;
+}
+
+#plugins .info {
+  font-family: 'Open Sans';
+  font-weight: 100;
+  font-size: 12px;
+  margin-top: 10%;
+}
+
+#plugins .info  p {
+  padding: 15% 20% 0 0;
+}
+
+/* PARALLAX */
+.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax-1 {
+  background-image: url("../images/bg.png");
+}
+
+.parallax-2 {
+  background-image: url("../images/clappr_devices_2.png");
+}
