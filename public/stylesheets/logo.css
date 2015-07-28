@@ -1,0 +1,15 @@
+@keyframes animate-logo {
+  0% {background-position: 0 0;}
+  100% {background-position: -105040px 0; }
+}
+
+.logo {
+  animation-name: animate-logo;
+  animation-duration: 7s;
+  animation-timing-function: steps(202, end);
+  animation-delay: initial;
+  animation-iteration-count: 1;
+  animation-direction: initial;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+}
