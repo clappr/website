@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes headerdown {
+  0% {
+    top: -50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+@-webkit-keyframes moveup {
+  0% {
+    transform: translate(0, -30%);
+	-webkit-transform: translate(0, -30%);
+	-moz-transform: translate(0, -30%);
+	-o-transform: translate(0, -30%);
+  }
+  100% {
+    transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+  }
+}
+
+
+
+@-webkit-keyframes gradientscroll {
+  0% {
+    background-position: 0 -800px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+@-webkit-keyframes scrollfade {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 6%;
+    opacity: 1;
+  }
+}
+
+
+@-webkit-keyframes bgreduce {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 6%;
+  }
+}
