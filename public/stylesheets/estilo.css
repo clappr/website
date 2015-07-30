@@ -593,7 +593,7 @@ p {
 	top: 300%;
 	left: 0;
 	background-color: #232323;
-	background: url('../_images/texture.png') repeat center center;
+	background: url('../images/texture.png') repeat center center;
 	background-size: 150px 150px;
 
 }
@@ -853,7 +853,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', e
 	top: 400%;
 	left: 0;
 	background-color: #232323;
-	background: url('../_images/texture.png') repeat center center;
+	background: url('../images/texture.png') repeat center center;
 	background-size: 150px 150px;
 
 }
@@ -1010,7 +1010,7 @@ color: #1455ff;
 	top: 500%;
 	left: 0;
 	background-color: #232323;
-	background: url('../_images/texture.png') repeat center center;
+	background: url('../images/texture.png') repeat center center;
 	background-size: 150px 150px;
 
 }
@@ -1124,7 +1124,7 @@ color: #1455ff;
 	top: 600%;
 	left: 0;
 	background-color: #232323;
-	background: url('../_images/texture.png') repeat center center;
+	background: url('../images/texture.png') repeat center center;
 	background-size: 150px 150px;
 }
 
@@ -1218,7 +1218,7 @@ color: #1455ff;
 
 .section5 {
 	position: absolute;
-	background: url('../_images/bgmulti.jpg') no-repeat center center;
+	background: url('../images/bgmulti.jpg') no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
 	width: 100%;
@@ -1457,7 +1457,7 @@ position: relative;
 	top: 900%;
 	left: 0;
 	background-color: #232323;
-	background: url('../_images/texture.png') repeat center center;
+	background: url('../images/texture.png') repeat center center;
 	background-size: 150px 150px;
 }
 

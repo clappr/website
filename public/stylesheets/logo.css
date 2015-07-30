@@ -4,12 +4,21 @@
 }
 
 .logo {
+  position: absolute;
   animation-name: animate-logo;
-  animation-duration: 7s;
+  animation-duration: 13s;
   animation-timing-function: steps(202, end);
-  animation-delay: initial;
+  animation-delay: 2s;
   animation-iteration-count: 1;
   animation-direction: initial;
   animation-fill-mode: forwards;
   animation-play-state: initial;
+  background: url('../images/logo.png') center center no-repeat;
+  width: 260px;
+  height: 150px;
+  background-size: cover;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
