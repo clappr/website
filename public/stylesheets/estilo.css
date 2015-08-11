@@ -32,9 +32,9 @@ body {
 	
 	opacity: 0;
 	-webkit-animation-name: fadein;
-	-webkit-animation-duration: 2s; 
+	-webkit-animation-duration: 4s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 0s;
+	-webkit-animation-delay: 3.4s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -74,7 +74,7 @@ header {
 	-webkit-animation-name: headerdown;
 	-webkit-animation-duration: 1s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7.2s;
+	-webkit-animation-delay: 10.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -96,7 +96,7 @@ header #logo {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7s;
+	-webkit-animation-delay: 10s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -146,7 +146,7 @@ header a {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7s;
+	-webkit-animation-delay: 10s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -167,28 +167,28 @@ header li {
 }
 
 header a:nth-child(1n+1) {
-	-webkit-animation-delay: 7.8s;
+	-webkit-animation-delay: 10.8s;
 }
 header a:nth-child(2n+2) {
-	-webkit-animation-delay: 7.7s;
+	-webkit-animation-delay: 10.7s;
 }
 header a:nth-child(3n+3) {
-	-webkit-animation-delay: 7.6s;
+	-webkit-animation-delay: 10.6s;
 }
 header a:nth-child(4n+4) {
-	-webkit-animation-delay: 7.5s;
+	-webkit-animation-delay: 10.5s;
 }
 header a:nth-child(5n+5) {
-	-webkit-animation-delay: 7.4s;
+	-webkit-animation-delay: 10.4s;
 }
 header a:nth-child(6n+6) {
-	-webkit-animation-delay: 7.3s;
+	-webkit-animation-delay: 10.3s;
 }
 header a:nth-child(7n+7) {
-	-webkit-animation-delay: 7.2s;
+	-webkit-animation-delay: 10.2s;
 }
 header a:nth-child(8n+8) {
-	-webkit-animation-delay: 7.1s;
+	-webkit-animation-delay: 10.1s;
 }
 
 
@@ -208,7 +208,7 @@ header #burger {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7s;
+	-webkit-animation-delay: 10s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -230,7 +230,7 @@ header #burger {
 	-webkit-animation-name: moveup;
 	-webkit-animation-duration: 1s; 
 	-webkit-animation-timing-function: cubic-bezier(0.32, 0.02, 0, 0.99); 
-	-webkit-animation-delay: 7s;
+	-webkit-animation-delay: 9s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -243,7 +243,7 @@ header #burger {
 	  -webkit-animation-name: fadein;
 	-webkit-animation-duration: 1.5s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7s;
+	-webkit-animation-delay: 9s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -299,7 +299,7 @@ h2 {
 	  -webkit-animation-name: fadein;
 	-webkit-animation-duration: 1.3s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 7.2s;
+	-webkit-animation-delay: 9.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -360,7 +360,7 @@ h2 {
 	-webkit-animation-name: scrollfade;
 	-webkit-animation-duration: 1.2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 9.4s;
+	-webkit-animation-delay: 10.4s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -438,7 +438,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', e
 	-webkit-animation-name: bgreduce;
 	-webkit-animation-duration: 1.3s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 9.2s;
+	-webkit-animation-delay: 10.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -689,157 +689,161 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', e
   margin: 0 auto;
   top: -0.5%;
   left: -0.4%;
-  padding: 20px;
   box-sizing: border-box;
   z-index: 1;
   background-color: rgba(0, 0, 0, .7);
 }
 
-.empty1 {
-	position: absolute;
-	 width: 9%;
-     height: 16%;
-	border: dashed 1px rgba(255, 255, 255, .8);
-	float: left;
+.lines {
+	opacity: 0.3;
 }
 
-.empty2 {
+.empty .vt {
 	position: absolute;
-	width: 9%;
-	height: 16%;
-	border: dashed 1px rgba(255, 255, 255, .8);
-	margin-top: 11%;
+	width: 1px;
+	height: 100%;
+	border: none;
+	background-color: white;
+	margin: 0;
 }
 
-.empty3 {
-	width: 9%;
-	height: 16%;
-	border: dashed 1px rgba(255, 255, 255, .8);
-	float: right;
-	vertical-align: top;
+.empty .c1 {
+	left: 11.11%;
+}
+.empty .c2 {
+	left: 22.22%;
+}
+.empty .c3 {
+	left: 33.33%;
+}
+.empty .c4 {
+	left: 44.44%;
+}
+.empty .c5 {
+	left: 55.55%;
+}
+.empty .c6 {
+	left: 66.66%;
+}
+.empty .c7 {
+	left: 77.77%;
+}
+.empty .c8 {
+	left: 88.88%;
+}
+
+.empty .hz {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	border: none;
+	background-color: white;
+	margin: 0;
+}
+
+.empty .l1 {
+	top: 16.66%;
+}
+.empty .l2 {
+	top: 33.33%;
+}
+.empty .l3 {
+	top: 50%;
+}
+.empty .l4 {
+	top: 66.66%;
+}
+.empty .l5 {
+	top: 83.33%;
+}
+
+.empty .square {
+	position: absolute;
+	background-color: white;
+	width: 11.11%;
+	height: 16.66%;
+	opacity: 0.4;
+}
+
+.empty .s1 {
+	left: 11.11%;
+}
+.empty .s2 {
+	left: 11.11%;
+	top: 33.33%;
+}
+.empty .s3 {
+	left: 22.22%;
+	top: 83.33%;
+}
+.empty .s4 {
+	left: 77.77%;
+	top: 66.66%;
+}
+.empty .s5 {
+	left: 77.77%;
+	top: 16.66%;
 }
 
 .img1 {
-	position: absolute;
-  	height: 72%;
-  	left: 67%;
-  	bottom: 0px;
-  	z-index: 2;
-  	transform: translate(0, 23.5%);
-	-webkit-transform: translate(0, 23.5%);
-	-moz-transform: translate(0, 23.5%);
-	-o-transform: translate(0, 23.5%);
+position: absolute;
+    height: 75.8%;
+    left: 64%;
+    bottom: 0px;
+    z-index: 2;
+    transform: translate(0, 23.5%);
+    -webkit-transform: translate(0, 23.5%);
+    -moz-transform: translate(0, 23.5%);
+    -o-transform: translate(0, 23.5%);
 }
 
 
 
 .img2 {
-	position: absolute;
-	z-index: 2;
-	bottom: 0;
-	right: 60%;
-	height: 34%;
+    position: absolute;
+    z-index: 2;
+    bottom: -157px;
+    right: 48%;
+    height: 44.7%;
 
 }
 .img3 {
-  position: absolute;
-  z-index: 2;
-  right: 73%;
-  top: 46%;
-  height: 10%;
-}
-
-@media (min-width: 2200px) {
-	.img3 {
-	right: 68%;
-	}
-}
-
-@media (max-width: 1300px) {
-	.img3 {
-		right: 78%;
-	}
+position: absolute;
+    z-index: 2;
+    right: 62%;
+    top: 28%;
+    height: 15.4%;
 }
 
 .img4 {
-  position: absolute;
-  z-index: 2;
-  right: 74%;
-  top: 27%;
-  height: 19%;
+position: absolute;
+    z-index: 2;
+    right: 64%;
+    top: 38%;
+    height: 34.9%;
 }
 
-@media (min-width: 2200px) {
-	.img4 {
-		right: 70%;
-	}
-}
-
-@media (max-width: 1300px) {
-	.img4 {
-		right: 78%;
-	}
-}
 
 .img5 {
-  position: absolute;
-  z-index: 2;
-  left: 73%;
-  top: 31%;
-  height: 17%;
+position: absolute;
+    z-index: 2;
+    left: 63%;
+    top: 28%;
+    height: 19.2%;
 
-}
-@media (max-width: 1300px) {
-	.img5 {
-		left: 77%;
-	}
 }
 
 .img6 {
-  position: absolute;
-  top: 32%;
-  left: 66%;
-  height: 9%;
-}
-@media (max-width: 1300px) {
-	.img6 {
-		left: 68%;
-	}
+    position: absolute;
+    top: 71%;
+    left: 56%;
+    height: 23.7%;
+
 }
 
+
 @media (max-width: 800px) {
-	.img1 {
-		height: 61%;
-		left: 57%;
-	}
-	.img2 {
-		  height: auto;
-  		width: 78%;
-		right: 40%;
-	}
-	.img3 {
-		  right: 68%;
-		  top: 9%;
-		  height: auto;
-  		width: 11%;
-	}
-	.img4 {
-		  right: 80%;
-		  top: 39%;
-		  height: auto;
-  		  width: 21%;
-	}
-	.img5 {
-		width: 22%;
-		height: auto;
-		left: 71%;
-		top: 3%;
-	}
-	.img6 {
-		left: 86%;
-		width: 12%;
-		height: auto;
-	}
+
 }
 
 /*------------------- 4 - CUSTOMIZE ----------------------*/

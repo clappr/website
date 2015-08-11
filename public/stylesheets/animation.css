@@ -9,6 +9,16 @@
   }
 }
 
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -10%; 
+  }
+}
+
 @-webkit-keyframes headerdown {
   0% {
     top: -50px;
