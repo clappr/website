@@ -74,7 +74,7 @@ header {
 	-webkit-animation-name: headerdown;
 	-webkit-animation-duration: 1s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10.2s;
+	-webkit-animation-delay: 9.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -96,7 +96,7 @@ header #logo {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10s;
+	-webkit-animation-delay: 9s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -146,7 +146,7 @@ header a {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10s;
+	-webkit-animation-delay: 9s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -167,28 +167,28 @@ header li {
 }
 
 header a:nth-child(1n+1) {
-	-webkit-animation-delay: 10.8s;
+	-webkit-animation-delay: 9.8s;
 }
 header a:nth-child(2n+2) {
-	-webkit-animation-delay: 10.7s;
+	-webkit-animation-delay: 9.7s;
 }
 header a:nth-child(3n+3) {
-	-webkit-animation-delay: 10.6s;
+	-webkit-animation-delay: 9.6s;
 }
 header a:nth-child(4n+4) {
-	-webkit-animation-delay: 10.5s;
+	-webkit-animation-delay: 9.5s;
 }
 header a:nth-child(5n+5) {
-	-webkit-animation-delay: 10.4s;
+	-webkit-animation-delay: 9.4s;
 }
 header a:nth-child(6n+6) {
-	-webkit-animation-delay: 10.3s;
+	-webkit-animation-delay: 9.3s;
 }
 header a:nth-child(7n+7) {
-	-webkit-animation-delay: 10.2s;
+	-webkit-animation-delay: 9.2s;
 }
 header a:nth-child(8n+8) {
-	-webkit-animation-delay: 10.1s;
+	-webkit-animation-delay: 9.1s;
 }
 
 
@@ -208,7 +208,7 @@ header #burger {
 	-webkit-animation-name: fadein;
 	-webkit-animation-duration: 2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10s;
+	-webkit-animation-delay: 9s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -230,7 +230,7 @@ header #burger {
 	-webkit-animation-name: moveup;
 	-webkit-animation-duration: 1s; 
 	-webkit-animation-timing-function: cubic-bezier(0.32, 0.02, 0, 0.99); 
-	-webkit-animation-delay: 9s;
+	-webkit-animation-delay: 8s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -243,7 +243,7 @@ header #burger {
 	  -webkit-animation-name: fadein;
 	-webkit-animation-duration: 1.5s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 9s;
+	-webkit-animation-delay: 8s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -299,7 +299,7 @@ h2 {
 	  -webkit-animation-name: fadein;
 	-webkit-animation-duration: 1.3s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 9.2s;
+	-webkit-animation-delay: 8.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -360,7 +360,7 @@ h2 {
 	-webkit-animation-name: scrollfade;
 	-webkit-animation-duration: 1.2s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10.4s;
+	-webkit-animation-delay: 9.4s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;
@@ -438,7 +438,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffffff', e
 	-webkit-animation-name: bgreduce;
 	-webkit-animation-duration: 1.3s; 
 	-webkit-animation-timing-function: ease; 
-	-webkit-animation-delay: 10.2s;
+	-webkit-animation-delay: 9.2s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: forwards;

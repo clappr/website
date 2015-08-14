@@ -5,9 +5,9 @@
 
 .sprite {
   animation-name: animate-logo, fadeout;
-  animation-duration: 7s, 1s;
+  animation-duration: 6s, 1s;
   animation-timing-function: steps(202), ease;
-  animation-delay: 1s, 8.6s;
+  animation-delay: 1s, 7.6s;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: forwards;
