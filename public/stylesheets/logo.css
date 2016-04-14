@@ -1,30 +1,128 @@
+@-webkit-keyframes animate-logo {
+  0% {background-position: 0 0;}
+  100% {background-position: -105040px 0; }
+}
+
+@-moz-keyframes animate-logo {
+  0% {background-position: 0 0;}
+  100% {background-position: -105040px 0; }
+}
+
+@-o-keyframes animate-logo {
+  0% {background-position: 0 0;}
+  100% {background-position: -105040px 0; }
+}
+
+@-ms-keyframes animate-logo {
+  0% {background-position: 0 0;}
+  100% {background-position: -105040px 0; }
+}
+
 @keyframes animate-logo {
   0% {background-position: 0 0;}
   100% {background-position: -105040px 0; }
 }
 
+@media (max-width: 700px) {
+
+    @-webkit-keyframes animate-logo {
+    0% {background-position: 0 0;}
+    100% {background-position: -52520px 0; }
+  }
+
+  @-moz-keyframes animate-logo {
+    0% {background-position: 0 0;}
+    100% {background-position: -52520px 0; }
+  }
+
+  @-o-keyframes animate-logo {
+    0% {background-position: 0 0;}
+    100% {background-position: -52520px 0; }
+  }
+
+  @-ms-keyframes animate-logo {
+    0% {background-position: 0 0;}
+    100% {background-position: -52520px 0; }
+  }
+
+  @keyframes animate-logo {
+    0% {background-position: 0 0;}
+    100% {background-position: -52520px 0; }
+  }
+}
+
 .sprite {
-  animation-name: animate-logo, fadeout;
-  animation-duration: 6s, 1s;
-  animation-timing-function: steps(202), ease;
-  animation-delay: 1s, 7.6s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: animate-logo, fadeout;
+     -moz-animation-name: animate-logo, fadeout;
+       -o-animation-name: animate-logo, fadeout;
+       -ms-animation-name: animate-logo, fadeout;
+          animation-name: animate-logo, fadeout;
+  -webkit-animation-duration: 6s, 1s;
+     -moz-animation-duration: 6s, 1s;
+     -ms-animation-duration: 6s, 1s;
+       -o-animation-duration: 6s, 1s;
+          animation-duration: 6s, 1s;
+  -webkit-animation-timing-function: steps(202), ease;
+     -moz-animation-timing-function: steps(202), ease;
+     -ms-animation-timing-function: steps(202), ease;
+       -o-animation-timing-function: steps(202), ease;
+          animation-timing-function: steps(202), ease;
+  -webkit-animation-delay: 0.5s, 7.6s;
+     -moz-animation-delay: 0.5s, 7.6s;
+     -ms-animation-delay: 0.5s, 7.6s;
+       -o-animation-delay: 0.5s, 7.6s;
+          animation-delay: 0.5s, 7.6s;
+  -webkit-animation-iteration-count: 1;
+     -moz-animation-iteration-count: 1;
+     -ms-animation-iteration-count: 1;
+       -o-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+     -moz-animation-direction: normal;
+     -ms-animation-direction: normal;
+       -o-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+     -moz-animation-fill-mode: forwards;
+     -ms-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   background: url('../images/logo.png');
   width: 520px;
   height: 300px;
-  background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+     background-size: cover;
 }
+
+
+
 
 .logo {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 2;
   width: 520px;
   height: 300px;
 
 }
 
+@media (max-width: 700px) {
+  .sprite {
+    display: none;
+
+  }
+
+
+  .logo {
+    display: none;
+  }
+
+}

@@ -4,16 +4,22 @@
         <meta charset="UTF-8"/>
         <title>Clappr</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheets/animation.css"/>
+        
         <link rel="stylesheet" type="text/css" href="stylesheets/estilo.css"/>
+        <link rel="stylesheet" type="text/css" href="stylesheets/animation.css"/>
          <link rel="stylesheet" type="text/css" href="stylesheets/logo.css"/>
         <script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
 
 
     </head>
 
     <body>
-
 
         <!------------ 1 - APRESENTAÇÃO ------------>
 
@@ -23,6 +29,8 @@
             <video autoplay="1" loop="1" id="bgvideo">
                 <source src="media/video.mp4"</source>
             </video>
+
+            <div class="bg-responsive"></div>
 
             <div id="textura"></div>
 
@@ -69,22 +77,10 @@
                     </g>
                 </svg>
 
-                <ul>
-                    <a><li>Blog</li></a>
-                    <a><li>Documentation</li></a>
-                    <a><li>Repository</li></a>
+                
+                <div class="line-header"></div>              
 
-                </ul>
-
-                <svg version="1.1" id="burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="42px" height="19px" viewBox="-1.921 -1 42 19" enable-background="new -1.921 -1 42 19" xml:space="preserve">
-                <path fill="#fff" d="M38.079,1.5c0,0.276-0.225,0.5-0.5,0.5h-31c-0.276,0-0.5-0.224-0.5-0.5l0,0c0-0.276,0.224-0.5,0.5-0.5h31
-                    C37.854,1,38.079,1.224,38.079,1.5L38.079,1.5z"/>
-                <path fill="#fff" d="M35.079,8.5c0,0.275-0.225,0.5-0.5,0.5h-31c-0.276,0-0.5-0.225-0.5-0.5l0,0c0-0.276,0.224-0.5,0.5-0.5h31
-                    C34.854,8,35.079,8.224,35.079,8.5L35.079,8.5z"/>
-                <path fill="#fff" d="M32.079,15.5c0,0.275-0.225,0.5-0.5,0.5h-31c-0.276,0-0.5-0.225-0.5-0.5l0,0c0-0.276,0.224-0.5,0.5-0.5h31
-                    C31.854,15,32.079,15.224,32.079,15.5L32.079,15.5z"/>
-                </svg>
+              
 
 
             </header>
@@ -98,13 +94,11 @@
                 <a class="bt_github"><span>See on github</span><hr></a>
             </div>
 
+            <div class="horizontal"></div>
             <div class="scroll">
                 <span>Getting Started</span>
                 <div class="line"></div>
             </div>
-
-            <div class="horizontal"></div>
-
         </div>
 
 
@@ -112,71 +106,33 @@
 
 
         <div class="section2">
-            <div class="start">
-                <h2>Start using Clappr now</h2>
+            <div class="start none">
+                <h2>Simple.</h2>
                 <p>Just import it, plug it in your page and it’s ready to play.</p>
                 <div class="boxcode">
                     <span class="title">Import</span>
                     <pre>&lt;<span class="pl-ent">head</span>&gt;
-    <span class="pl-s1">  &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://cdn.clappr.io/latest/clappr.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-&lt;/<span class="pl-ent">head</span>&gt;</pre>
+                    <span class="pl-s1">  &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://cdn.clappr.io/latest/clappr.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+                    &lt;/<span class="pl-ent">head</span>&gt;</pre>
 
                 </div>
                 <div class="boxcode">
                     <span class="title">Plug</span>
                     <pre>&lt;<span class="pl-ent">body</span>&gt;
-    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>player<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
-    <span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
-    <span class="pl-s1">    <span class="pl-k">var</span> player <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Clappr.Player</span>({source<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://your.video/here.mp4<span class="pl-pds">"</span></span>, parentId<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#player<span class="pl-pds">"</span></span>});</span>
-    <span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
-&lt;/<span class="pl-ent">body</span>&gt;</pre>
+                    &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>player<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
+                    <span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
+                    <span class="pl-s1">    <span class="pl-k">var</span> player <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Clappr.Player</span>({source<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://your.video/here.mp4<span class="pl-pds">"</span></span>, parentId<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#player<span class="pl-pds">"</span></span>});</span>
+                    <span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
+                    &lt;/<span class="pl-ent">body</span>&gt;</pre>
 
 
                 </div>
             </div>
 
-        </div>
 
-
-        <!--------------- SECTION 2 - PARTE 2 -------------->
-
-
-        <div class="section22">
-
-            <div class="video">
+            <div class="video none">
                 <div class="v">
-                <div id="player1"></div>
-                <script>
-                    var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player1", width: "100%", height: "100%", autoPlay: true, loop: true});
-                </script>
-                </div>
-                <div class="shadow"></div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-        <!--------------- SECTION 3 - OPEN SOURCE -------------->
-
-        <div class="section3">
-            <div class="opensource">
-                <h2>Make it your way</h2>
-                <p>Clappr is 100% Open Source and extensible. Build your own plugins and create new amazing video experiences.</p>
-
-
-               <!-- -->
-            </div>
-
-            <div class="video">
-
-                <div class="v">
-                    <div class="empty">
+                    <div class="empty none">
                         <div class="lines">
                             <hr class="vt c1"></hr>
                             <hr class="vt c2"></hr>
@@ -199,23 +155,46 @@
                             <span class="square s5"></span>
                         </div>
                     </div>
-
-
-                <div id="player"></div>
+                <div id="player1"></div>
                 <script>
-                    var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player", width: "100%", height: "100%", autoPlay: true, loop: true});
+                    var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player1", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});
                 </script>
                 </div>
                 <div class="shadow"></div>
             </div>
 
+
+
+
+        </div>
+
+
+        <div class="section21"></div>
+
+
+
+
+
+        <!--------------- SECTION 3 - cus SOURCE -------------->
+
+        <div class="section3">
+            <div class="opensource none">
+                <h2>Make it your way</h2>
+                <p>Clappr is 100% Open Source and extensible. <a href="">See how to build your own plugins and create new amazing video experiences.</a></p>
+
+
+               <!-- -->
+            </div>
+
             
-            <img class="img2" src="images/card2.png">
-            <img class="img3" src="images/card3.png">
-            <img class="img4" src="images/card4.png">
-            <img class="img5" src="images/card5.png">
-            <img class="img6" src="images/card6.png">
-            <img class="img1" src="images/card1.png">
+            <div class="opensource-images none">
+                <img class="img2" src="images/card2.png">
+                <img class="img3" src="images/card3.png">
+                <img class="img4" src="images/card4.png">
+                <img class="img5" src="images/card5.png">
+                <img class="img6" src="images/card6.png">
+                <img class="img1" src="images/card1.png">
+            </div>
 
         </div>
 
@@ -223,54 +202,24 @@
         <!--------------- SECTION 4 - CUSTOMIZE -------------->
 
         <div class="section4">
-            <div class="customize">
+            <div class="customize none">
                 <div class="text">
                     <h2>Its just fits to your Product</h2>
                     <p>You can customize everything in Clappr UI. Create a chromeless video experience or change the UX to make it perfect for you. Simple use <b>Html 5</b> and <b>CSS3</b>.</p>
                     <div class="circles">
                         <div class="circle blue">1</div>
-                        <div class="circle yellow">2</div>
-                        <div class="circle purple">3</div>
+                        <div class="circle2">2</div>
+                        <div class="circle3">3</div>
                     </div>
-                </div>
-
-                <div class="video">
-                    <div class="v">
-                    <div id="player2"></div>
-                    <script>
-                        var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player2", width: "100%", height: "100%", autoPlay: true, loop: true});
-                    </script>
-                    </div>
-                    <div class="shadow"></div>
                 </div>
 
             </div>
         </div>
 
         <div class="section42">
-            <div class="customize">
-                <div class="text">
-                <h2>Its just fits to your Product</h2>
-                <p>You can customize everything in Clappr UI. Create a chromeless video experience or change the UX to make it perfect for you. Simple use <b>Html 5</b> and <b>CSS3</b>.</p>
-                <div class="circles">
-                    <div class="circle blue">1</div>
-                    <div class="circle yellow">2</div>
-                    <div class="circle purple">3</div>
-                </div>
-                </div>
+          
 
-                <div class="video">
-                    <div class="v">
-                    <div id="player3"></div>
-                    <script>
-                        var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player3", width: "100%", height: "100%", autoPlay: true, loop: true});
-                    </script>
-                    </div>
-                    <div class="shadow"></div>
-                </div>
-            </div>
-
-            <div class="infantil">
+            <div class="infantil none">
 
 <svg version="1.1" id="nuvem1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      width="344.5px" height="120.5px" viewBox="0 0 344.5 120.5" enable-background="new 0 0 344.5 120.5" xml:space="preserve">
@@ -452,7 +401,6 @@
         </div>
 
         <div class="section43">
-            <div class="customize">
 
                 <div class="blur">
                     <div class="blur2"></div>
@@ -460,47 +408,18 @@
                     <div class="blur1"></div>
                 </div>
 
-                <div class="text">
-                <h2>Its just fits to your Product</h2>
-                <p>You can customize everything in Clappr UI. Create a chromeless video experience or change the UX to make it perfect for you. Simple use <b>Html 5</b> and <b>CSS3</b>.</p>
-                <div class="circles">
-                    <div class="circle blue">1</div>
-                    <div class="circle yellow">2</div>
-                    <div class="circle purple">3</div>
-                </div>
-                </div>
-
-                <div class="video">
-                    <div class="v">
-                    <div id="player4"></div>
-                    <script>
-                        var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player4", width: "100%", height: "100%", autoPlay: true, loop: true});
-                    </script>
-                    </div>
-                    <div class="shadow"></div>
-                </div>
-
-            </div>
         </div>
 
                 <!--------------- SECTION 5 - MULTIDEVICE -------------->
 
         <div class="section5">
+            <div class="mask">
             <div class="multidevice">
                 <h2>Play anywhere</h2>
                 <p>Clappr is HTML5 first and uses most modern technologies to deliver your media across <b>Smartphones</b>, <b>Tablets</b>, <b>Desktops</b> and <b>TV's</b>.</p>
             </div>
 
             <img class="imgdevice" src="images/imgmulti.png">
-
-            <div class="video">
-
-                <div class="v">
-                <div id="player5"></div>
-                <script>
-                    var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player5", width: "100%", height: "100%", autoPlay: true, loop: true});
-                </script>
-                </div>
             </div>
 
         </div>
@@ -562,7 +481,7 @@
         <div class="section7">
             <div class="credits">
                 <div class="category">
-                    <span>Design</span>
+                    <span>Design & Front-End</span>
                     <ul>
                         <a>Felipe Victor<hr></a>
                         <a>Karina Sirqueira<hr></a>
@@ -604,6 +523,49 @@
 
         </div>
 
+        <a class="leftmenu">
+            <div class="icon">
+                <svg version="1.1" class="burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="50px" height="32px" viewBox="0 0 50 32" enable-background="new 0 0 50 32" xml:space="preserve">
+                <line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="9" x2="37" y2="9"/>
+                <line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="16" x2="37" y2="16"/>
+                <line fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="23" x2="37" y2="23"/>
+                </svg>                
+            </div>            
+        </a>
+
+        <div class="leftmenu-open none">
+            <div class="protection-menu"></div>
+            <div class="menu">
+                <ul>
+                    <a><li>Repository</li></a>
+                    <a><li>Documentation</li></a>
+                    
+                    <hr>
+                    <a><li>Introduction</li></a>
+                    <a><li>Get Started</li></a>
+                    <a><li>Extensible</li></a>
+                    <a><li>Customizable</li></a>
+                    <a><li>Multidevice</li></a>
+                    <a><li>Official Plugins</li></a>
+                    <a><li>Credits</li></a>
+                </ul>
+            </div>
+        </div>
+
+    
+       
+       <div class="loader">
+        <div class="bg"></div>
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
+            <circle fill="#FFFFFF" cx="30" cy="30" r="30"/>
+            </svg>
+       </div>
+
+
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>   
 
     </body>
 
