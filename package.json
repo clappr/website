@@ -1,0 +1,13 @@
+{
+  "name": "clappr-website",
+  "version": "2.0.0",
+  "description": "An extensible media player for applications",
+  "main": ".public/js/clappr-website.js",
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --host 0.0.0.0 --content-base public/ --output-public-path latest/ --hot"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
