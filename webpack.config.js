@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: path.resolve(__dirname, '/main.js'),
+  entry: path.resolve(__dirname, 'main.js'),
   plugins: [
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(require('./package.json').version)
