@@ -7,18 +7,18 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/estilo.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/animation.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/logo.css"/>
-    <script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
     <script type="text/javascript" src="vendors/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="vendors/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/clappr-website.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
   </head>
   <body>
     <!------------ 1 - APRESENTAÇÃO ------------>
-    <div class="presentation">
-      <video autoplay="1" loop="1" id="bgvideo">
-        <source src="media/video.mp4"</source>
-      </video>
-      <div class="bg-responsive"></div>
+    <div id="1" class="presentation">
+      <div id="bgvideo">
+        <script>var player = new Clappr.Player({source: "media/video.mp4", parentId:"#bgvideo", width: "100%", height: "100%", autoPlay: true, loop: true, chromeless: true, mute: true});</script>
+      </div>
       <div id="textura"></div>
       <header>
         <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="508" height="202.667" viewBox="0 0 508 202.667" xml:space="preserve"><g fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M125.171 19.253H64.693m439.099 0H145.433m161.708 164.661h136.85m-228.506 0h71.396m-281.839 0H195.18M155.953 29.384c-2.258 6.186-5.383 14.769-8.488 23.362-3.107 8.6-6.996 16.074-17.917 26.996-6.542 6.541-14.15 14.15-21.757 21.757-20.322 20.322-40.625 40.627-40.625 40.627-4.488 4.486-9.055 8.125-13.543 8.125H33.3c-8.975 0-13.602-7.275-10.336-16.252l23.659-65.001c3.267-8.977 10.481-16.252 19.457-16.252h22.438m67.139 45.578c-1.058 1.057-2.117 2.115-3.177 3.176-20.323 20.322-40.627 40.627-40.627 40.627-4.486 4.486-9.054 8.125-13.541 8.125H95.66c-4.487 0-6.801-3.639-5.168-8.125 0 0 7.39-20.305 14.787-40.627 7.39-20.304 32.53-89.379 32.53-89.379 1.634-4.487 3.887-8.125 8.374-8.125h5.482c4.672 0 7.432 1.971 8.543 5.127"/><path d="M291.723 198.994l52.865-145.229s.291-1.023-.434-1.023c-.834 0-1.463.834-1.463.834s-40.668 40.668-47.916 47.917l-32.5 32.5c-8.975 8.975-6.268 16.252 2.707 16.252h.133c8.975 0 16.189-7.277 19.457-16.252 0 0 5.916-16.256 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.266-8.975 1.502-16.25-7.473-16.25h-2.732c-4.482 0-9.041 3.639-13.523 8.125l-52.65 52.774-28.479 28.479c-4.487 4.488-8.987 8.133-13.475 8.133h-1.413c-.558 0-.846-.443-.643-.992l18.992-52.524-45.442 45.384c-4.487 4.488-9.055 8.127-13.542 8.127h-2.923c-4.487 0-6.801-3.639-5.168-8.127l14.721-40.623 11.83-32.505c3.267-8.975 10.481-16.25 19.456-16.25h20.855c7.553 0 12.026 5.152 11.308 12.135"/><path d="M400.772 150.148c25.619-70.39 35.111-96.472 35.111-96.472s.293-1.021-.432-1.021c-.834 0-1.463.834-1.463.834l-47.916 47.917-8.453 8.457-24.043 24.043c-8.975 8.975-6.266 16.25 2.709 16.25h.131c8.975 0 16.189-7.275 19.457-16.25 0 0 5.916-16.258 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.268-8.975 1.348-16.25-7.627-16.25h-2.721c-4.482 0-8.898 3.637-13.381 8.125 0 0-20.301 20.322-40.582 40.628-3.768 3.771-10.895 10.912-12.561 12.58"/><path d="M486.95 64.877c.756-7.018-3.723-12.205-11.301-12.205h-.762c-4.482 0-9.043 3.639-13.525 8.125 0 0-20.301 20.324-40.582 40.628-.668.67-2.631 2.611-3.596 3.562M199.801 199.171s45.834-125.932 53.23-146.255"/></g></svg>
@@ -29,7 +29,7 @@
       </div>
       <div class="future">
         <h2>An extensible media player for applications</h2>
-        <a class="bt_github"><span>See on github</span><hr></a>
+        <a class="bt_github" href="https://github.com/clappr"><span>See on github</span><hr></a>
       </div>
       <div class="horizontal"></div>
       <div class="scroll">
@@ -39,24 +39,32 @@
     </div>
 
     <!--------------- SECTION 2 - GETTING STARTED -------------->
-    <div class="section2">
+    <div id="2" class="section2">
       <div class="start none">
         <h2>Simple.</h2>
         <p>Just import it, plug it in your page and it’s ready to play.</p>
         <div class="boxcode">
           <span class="title">Import</span>
-          <pre>&lt;<span class="pl-ent">head</span>&gt;
-          <span class="pl-s1">  &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://cdn.clappr.io/latest/clappr.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
-          &lt;/<span class="pl-ent">head</span>&gt;</pre>
+          <pre>
+            <code class="import-code">
+&lt;head&gt;
+  &lt;script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+            </code>
+          </pre>
         </div>
         <div class="boxcode">
           <span class="title">Plug</span>
-          <pre>&lt;<span class="pl-ent">body</span>&gt;
-          &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>player<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;
-          <span class="pl-s1">  &lt;<span class="pl-ent">script</span>&gt;</span>
-          <span class="pl-s1">    <span class="pl-k">var</span> player <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Clappr.Player</span>({source<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>http://your.video/here.mp4<span class="pl-pds">"</span></span>, parentId<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#player<span class="pl-pds">"</span></span>});</span>
-          <span class="pl-s1">  &lt;/<span class="pl-ent">script</span>&gt;</span>
-          &lt;/<span class="pl-ent">body</span>&gt;</pre>
+          <pre>
+            <code class="plug-code">
+&lt;body&gt;
+  &lt;div id="player"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    var player = new Clappr.Player({source: "http://your.video/here.mp4", parentId: "#player"});
+  &lt;/script&gt;
+&lt;/body&gt;
+            </code>
+          </pre>
         </div>
       </div>
       <div class="video none">
@@ -84,17 +92,15 @@
             </div>
           </div>
           <div id="player1"></div>
-          <script>
-              var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player1", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});
-          </script>
+          <script>var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player1", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});</script>
         </div>
-        <div class="shadow"></div>
+        <!-- <div class="shadow"></div> -->
       </div>
     </div>
     <div class="section21"></div>
 
     <!--------------- SECTION 3 - cus SOURCE -------------->
-    <div class="section3">
+    <div id="3" class="section3">
       <div class="opensource none">
         <h2>Make it your way</h2>
         <p>Clappr is 100% Open Source and extensible. <a href="">See how to build your own plugins and create new amazing video experiences.</a></p>
@@ -110,7 +116,7 @@
     </div>
 
     <!--------------- SECTION 4 - CUSTOMIZE -------------->
-    <div class="section4">
+    <div id="4" class="section4">
       <div class="customize none">
         <div class="text">
           <h2>Its just fits to your Product</h2>
@@ -140,18 +146,16 @@
     </div>
 
     <!--------------- SECTION 5 - MULTIDEVICE -------------->
-    <div class="section5">
-      <div class="mask">
+    <div id="5" class="section5">
       <div class="multidevice">
         <h2>Play anywhere</h2>
         <p>Clappr is HTML5 first and uses most modern technologies to deliver your media across <b>Smartphones</b>, <b>Tablets</b>, <b>Desktops</b> and <b>TV's</b>.</p>
       </div>
       <img class="imgdevice" src="images/imgmulti.png">
-      </div>
     </div>
 
     <!--------------- SECTION 6 - PLUGINS -------------->
-    <div class="section6">
+    <div id="6" class="section6">
       <div class="plugins">
         <h2>Add more to your Clappr</h2>
         <p>Check out the official plugins for your player</p>
@@ -191,7 +195,7 @@
     </div>
 
     <!--------------- SECTION 7 - CREDITS -------------->
-    <div class="section7">
+    <div id="7" class="section7">
       <div class="credits">
         <div class="category">
           <span>Design & Front-End</span>
@@ -242,16 +246,16 @@
       <div class="protection-menu"></div>
       <div class="menu">
         <ul>
-          <a><li>Repository</li></a>
-          <a><li>Documentation</li></a>
+          <a href="https://github.com/clappr/clappr"><li>Repository</li></a>
+          <a href="https://github.com/clappr/clappr"><li>Documentation</li></a>
           <hr>
-          <a><li>Introduction</li></a>
-          <a><li>Get Started</li></a>
-          <a><li>Extensible</li></a>
-          <a><li>Customizable</li></a>
-          <a><li>Multidevice</li></a>
-          <a><li>Official Plugins</li></a>
-          <a><li>Credits</li></a>
+          <a href="#1"><li>Introduction</li></a>
+          <a href="#2"><li>Get Started</li></a>
+          <a href="#3"><li>Extensible</li></a>
+          <a href="#4"><li>Customizable</li></a>
+          <a href="#5"><li>Multidevice</li></a>
+          <a href="#6"><li>Official Plugins</li></a>
+          <a href="#7"><li>Credits</li></a>
         </ul>
       </div>
     </div>
