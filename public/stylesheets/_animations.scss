@@ -1,0 +1,129 @@
+@import "compass/css3";
+@import "compass/css3/animation";
+
+@include keyframes("loading") {
+  0% { @include transform(translate(-50%,-50%) scale(1)); }
+  100% { @include transform(translate(-50%,-50%) scale(2)); }
+}
+
+@include keyframes("fadein") {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@include keyframes("fadeout") {
+  0% { opacity: 1; }
+  100% { opacity: 0; margin-top: -10%; }
+}
+
+@include keyframes ("headerdown") {
+  0% { top: -50%; }
+  100% { top: 4vh; }
+};
+
+@include keyframes ("moveup") {
+  0% { @include transform(translate(0, -30%)); }
+  100% { @include transform(translate(0, -50%)); }
+}
+
+@include keyframes ("gradientscroll") {
+  0% { box-shadow: inset 0 0vh 0 #EDEFF2; }
+  50% { box-shadow: inset 0 -2vh 0 #EDEFF2; }
+  100% { box-shadow: inset 0 0vh 0 #EDEFF2; }
+};
+
+@include keyframes ("scrollfade") {
+  0% { bottom: 0; opacity: 0; }
+  100% { bottom: 1vh; opacity: 1; }
+};
+
+@include keyframes("bgreduce") {
+  0% { height: 0%; }
+  100% { height: 6%; }
+}
+
+@media (max-width: 500px) {
+  @include keyframes("bgreduce") {
+    0% { height: 0%; }
+    100% { height: 4vh; }
+  }
+}
+
+@include keyframes("headerline") {
+  0% { height: 0; }
+  80% { height: 16vh; }
+  100% { height: 15vh; }
+}
+
+@include keyframes("nuvem") {
+  0% { margin-left: -3vw; }
+  50% { margin-left: 3vh; }
+  100% { margin-left: -3vw; }
+}
+
+@include keyframes("nuvem") {
+  0% { margin-left: 3vw; }
+  50% { margin-left: -3vh; }
+  100% { margin-left: 3vw; }
+}
+
+@include keyframes ("sol") {
+  0% { @include transform(scale(1)); }
+  50% { @include transform(scale(1.05)); }
+  100% { @include transform(scale(1)); }
+}
+
+@include keyframes ("animate-logo") {
+  0% { background-position: 0 0; }
+  100% { background-position: -105040px 0; }
+}
+
+@media (max-width: 700px) {
+  @include keyframes ("animate-logo") {
+    0% { background-position: 0 0; }
+    100% { background-position: -52520px 0; }
+  }
+}
+
+@mixin custom-animation($name1: none, $duration1: 0s, $delay1: 0s, $time-func1: ease, $iterations: 1, $direction: normal, $fill-mode: none, $play-state: running, $name2: none, $duration2: 0s, $delay2: 0s, $time-func2: ease) {
+  -webkit-animation-name: $name1, $name2;
+     -moz-animation-name: $name1, $name2;
+       -o-animation-name: $name1, $name2;
+       -ms-animation-name: $name1, $name2;
+          animation-name: $name1, $name2;
+  -webkit-animation-duration: $duration1, $duration2;
+     -moz-animation-duration: $duration1, $duration2;
+     -ms-animation-duration: $duration1, $duration2;
+       -o-animation-duration: $duration1, $duration2;
+          animation-duration: $duration1, $duration2;
+  -webkit-animation-timing-function: $time-func1, $time-func2;
+     -moz-animation-timing-function: $time-func1, $time-func2;
+     -ms-animation-timing-function: $time-func1, $time-func2;
+       -o-animation-timing-function: $time-func1, $time-func2;
+          animation-timing-function: $time-func1, $time-func2;
+  -webkit-animation-delay: $delay1, $delay2;
+     -moz-animation-delay: $delay1, $delay2;
+     -ms-animation-delay: $delay1, $delay2;
+       -o-animation-delay: $delay1, $delay2;
+          animation-delay: $delay1, $delay2;
+  -webkit-animation-iteration-count: $iterations;
+     -moz-animation-iteration-count: $iterations;
+     -ms-animation-iteration-count: $iterations;
+       -o-animation-iteration-count: $iterations;
+          animation-iteration-count: $iterations;
+  -webkit-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+     -ms-animation-direction: $direction;
+       -o-animation-direction: $direction;
+          animation-direction: $direction;
+  -webkit-animation-fill-mode: $fill-mode;
+     -moz-animation-fill-mode: $fill-mode;
+     -ms-animation-fill-mode: $fill-mode;
+       -o-animation-fill-mode: $fill-mode;
+          animation-fill-mode: $fill-mode;
+    -webkit-animation-play-state: $play-state;
+  	   -moz-animation-play-state: $play-state;
+  	   -ms-animation-play-state: $play-state;
+  	     -o-animation-play-state: $play-state;
+  	        animation-play-state: $play-state;
+}
