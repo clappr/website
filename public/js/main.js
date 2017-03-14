@@ -1,3 +1,5 @@
+require('./../stylesheets/main.scss')
+
 $(window).load(function() {
   $('.loader').attr('style', 'opacity: 0;');
 
@@ -322,4 +324,25 @@ $(window).load(function() {
       }
     }
   });
+
+  //tentando fazer o smooth scrolling sem JQuery /:
+  // var sections = document.querySelectorAll('a[href*="#"]:not([href="#"])');
+  // for(var section of sections) {
+  //   section.addEventListener('click', function() {
+  //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  //       var target = document.getElementById(this.hash.slice(1));
+  //       if (target) {
+  //         var keyframes = [
+  //           {scrollTop: target.offsetTop, easing: 'ease-out'}
+  //         ];
+  //         var animateOptions = {
+  //           duration:1000,
+  //           iterations: Infinity
+  //         };
+  //         document.body.animate(keyframes, animateOptions);
+  //         return false;
+  //       }
+  //     }
+  //   });
+  // };
 });
