@@ -11,6 +11,7 @@ src/base/jst.js
 *.cache
 aws.json
 npm-debug.log
+public/clappt-website.js
 
 # bump
 *.bkp
