@@ -29,7 +29,7 @@ module.exports = {
     extensions: ['', '.js']
   },
   output: {
-    // path: path.resolve(__dirname, ''),
+    path: path.resolve(__dirname, 'public'),
     filename: 'clappr-website.js'
   }
 }
