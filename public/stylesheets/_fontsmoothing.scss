@@ -1,0 +1,10 @@
+@mixin custom-fontsmoothing($value, $trasition) {
+  font-smoothing: $value;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: $value;
+    -moz-font-smoothing: grayscale;
+    -osx-font-smoothing: grayscale;
+    -moz-transition: all $trasition;
+    -o-transition: all $trasition;
+    transition: all $trasition;
+}
