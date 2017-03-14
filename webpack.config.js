@@ -15,6 +15,7 @@ module.exports = {
   ],
   module: {
    loaders: [
+     { test: /\.js$/, loader: 'babel-loader' },
      { test: /\.(png|woff|eot|ttf|swf|cur)/, loader: 'url-loader' },
      { test: /\.scss$/, loader: "style-loader!css-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib") },
      { test: /\.html/, loader: 'html?minimize=false' }
