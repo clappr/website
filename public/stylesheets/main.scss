@@ -45,18 +45,7 @@ body {
 	top: 0;
 	right: 0;
 	opacity: 0.4;
-	background: rgb(0,127,101); /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  rgba(0,127,101,1) 0%, rgba(11,47,140,1) 100%); /* FF3.6+ */
-	background: gradient(linear, left top, right bottom, color-stop(0%,rgba(0,127,101,1)), color-stop(100%,rgba(11,47,140,1))); /* Chrome,Safari4+ */
-	background: -moz-linear-gradient(135deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-	background: -o-linear-gradient(135deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-	background: linear-gradient(-45deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%); /* Opera 11.10+ */
-	background: linear-gradient(-45deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%); /* IE10+ */
-	background: -moz-linear-gradient(315deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-	background: -o-linear-gradient(315deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-	background: linear-gradient(135deg,  rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007f65', endColorstr='#0b2f8c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  @include background(linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%));
 }
 
 header {
@@ -71,19 +60,19 @@ header {
 
 @media (max-width: 800px) {
 	header {
-		  padding: 3% 8%;
-		  width: 84%;
+	  padding: 3% 8%;
+	  width: 84%;
 	}
 }
 
 #logo {
-    position: relative;
-    display: block;
-    width: 20vh;
-    height: auto;
-    margin: 0 auto;
-    opacity: 0;
-    @include custom-animation(fadein, 2s, 9s, ease, 1, alternate, forwards);
+  position: relative;
+  display: block;
+  width: 20vh;
+  height: auto;
+  margin: 0 auto;
+  opacity: 0;
+  @include custom-animation(fadein, 2s, 9s, ease, 1, alternate, forwards);
 }
 
 @media (max-width: 1100px) {
@@ -94,24 +83,24 @@ header {
 
 @media (max-width: 800px) {
 	#logo {
-		  width: 25%;
+    width: 25%;
 	}
 }
 
 @media (max-width: 500px) {
 	#logo {
-		  width: 45%;
+		width: 45%;
 	}
 }
 
 .line-header {
 	width: 1px;
-    margin: 4vh auto 0;
-    top: 10%;
-    left: 50%;
-    opacity: 0.5;
-    background-color: white;
-    @include custom-animation(headerline, 1s, 9.2s, ease, 1, alternate, forwards);
+  margin: 4vh auto 0;
+  top: 10%;
+  left: 50%;
+  opacity: 0.5;
+  background-color: white;
+  @include custom-animation(headerline, 1s, 9.2s, ease, 1, alternate, forwards);
   }
 
 .future {
@@ -121,11 +110,7 @@ header {
 	width: 100%;
 	text-align: center;
 	top: 48%;
-	-webkit-transform: translate(0, -50%);
-	   -moz-transform: translate(0, -50%);
-	    -ms-transform: translate(0, -50%);
-	     -o-transform: translate(0, -50%);
-	        transform: translate(0, -50%);
+  @include transform(translate(0, -50%));
   @include custom-animation(moveup, 1s, 8s, cubic-bezier(0.32, 0.02, 0, 0.99), 1, alternate, forwards);
 }
 
@@ -135,14 +120,14 @@ header {
  }
 
 h2 {
-	  font-style: italic;
-	  font-weight: 200;
-	  font-size: 10.5vmin;
-	  letter-spacing: -0.6vmin;
-	  color: white;
-	  line-height: 100%;
-	  margin: 0 auto 5vh;
-	  width: 90%;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 10.5vmin;
+  letter-spacing: -0.6vmin;
+  color: white;
+  line-height: 100%;
+  margin: 0 auto 5vh;
+  width: 90%;
 }
 
 /*@media (max-width: 800px) {
@@ -170,11 +155,8 @@ h2 {
 	text-transform: uppercase;
 	border-radius: 3px;
 	letter-spacing: 1px;
-	-moz-transition: background-color 0.2s, box-shadow 0.2s, border-radius 0.2s, padding 0.2s;
-	-o-transition: background-color 0.2s, box-shadow 0.2s, border-radius 0.2s, padding 0.2s;
-	transition: background-color 0.2s, box-shadow 0.2s, border-radius 0.2s, padding 0.2s;
-	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
 	opacity: 0;
+  @include transition(background-color 0.2s, box-shadow 0.2s, border-radius 0.2s, padding 0.2s);
   @include custom-animation(fadein, 1.3s, 8.2s, ease, 1, alternate, forwards);
 }
 
@@ -199,9 +181,7 @@ h2 {
  	position: absolute;
  	margin: 13px 0 0 5px;
  	opacity: 0;
- 	-moz-transition: width 0.2s, opacity 0.2s, margin 0.2s;
- 	-o-transition: width 0.2s, opacity 0.2s, margin 0.2s;
- 	transition: width 0.2s, opacity 0.2s, margin 0.2s;
+  @include transition(width 0.2s, opacity 0.2s, margin 0.2s);
 }
 
 .future .bt_github:hover {
@@ -224,23 +204,21 @@ h2 {
 }
 
 .scroll {
-    position: absolute;
-    z-index: 5;
-    bottom: 1vh;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-	opacity: 0;
+  position: absolute;
+  z-index: 5;
+  bottom: 1vh;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  @include transition(all 0.5s);
   @include custom-animation(scrollfade, 1.2s, 9.4s, ease, 1, alternate, forwards);
 }
 
 @media (max-width: 500px) {
 	.scroll {
+    bottom: 0;
     @include custom-animation(fadein);
-		bottom: 0;
 	}
 }
 
@@ -250,34 +228,29 @@ h2 {
 	font-style: italic;
 	color: white;
 	text-align: center;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+	@include transition(all 0.5s);
 }
 
 @media (max-width: 500px) {
 	.scroll span {
-		  font-size: 16px;
+    font-size: 16px;
 	}
 }
 
 .scroll .line {
-    width: 2px;
-    height: 10vh;
-    margin: 20px auto 0;
-    background-color: #0046FF;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    @include custom-animation(gradientscroll, 1s, 0s, ease, infinite, normal, forwards);
+  width: 2px;
+  height: 10vh;
+  margin: 20px auto 0;
+  background-color: #0046FF;
+  @include transition(all 0.5s);
+  @include custom-animation(gradientscroll, 1s, 0s, ease, infinite, normal, forwards);
   }
 
 @media (max-width: 500px) {
 	.scroll .line {
-		  height: 50px;
-		  -o-background-size: 100px 100px;
-		     background-size: 100px 100px;
-		  margin: 15px auto 0;
+    height: 50px;
+    margin: 15px auto 0;
+    @include background-size(100px 100px);
 	}
 }
 
@@ -309,16 +282,10 @@ h2 {
   z-index: 2;
   width: 100%;
   top: 48%;
-  -webkit-transform: translate(0, -50%) scale(0.8);
-     -moz-transform: translate(0, -50%) scale(0.8);
-      -ms-transform: translate(0, -50%) scale(0.8);
-       -o-transform: translate(0, -50%) scale(0.8);
-          transform: translate(0, -50%) scale(0.8);
   text-align: center;
   opacity: 0;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  @include transform(translate(0, -50%) scale(0.8));
+  @include transition(all 0.5s ease-out);
   will-change: transform;
 }
 
@@ -353,9 +320,7 @@ p {
   width: 80%;
   /*padding: 30px 30px;*/
   margin: -1px auto 0;
-  overflow-wrap: break-word;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  @include box-sizing(border-box);
   overflow-wrap: break-word;
 }
 
@@ -371,11 +336,7 @@ p {
 	padding: 0px 15px;
 	margin-top: -15px;
 	left: 50%;
-	-webkit-transform: translate(-50%, 0%);
-	   -moz-transform: translate(-50%, 0%);
-	    -ms-transform: translate(-50%, 0%);
-	     -o-transform: translate(-50%, 0%);
-	        transform: translate(-50%, 0%);
+  @include transform(translate(-50%, 0%));
 }
 
 .boxcode pre {
@@ -391,15 +352,9 @@ p {
   height: 48vh;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateY(90deg);
-     -moz-transform: translate(-50%, -50%) rotateY(90deg);
-     -o-transform: translate(-50%, -50%) rotateY(90deg);
-     -ms-transform: translate(-50%, -50%) rotateY(90deg);
-          transform: translate(-50%, -50%) rotateY(90deg);
   opacity: 0;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  @include transform(translate(-50%, -50%) rotateY(90deg));
+  @include transition(all 0.5s ease-out);
   will-change: transform;
 }
 
@@ -410,9 +365,9 @@ p {
 }
 
 #player1 {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .section21 {
@@ -421,9 +376,8 @@ p {
 	width: 100%;
 	height: 80%;
 	left: 0;
-	-o-background-size: 150px 150px;
-	   background-size: 150px 150px;
-	top: 180%;
+  top: 180%;
+	@include background-size(150px 150px);
 }
 
 /*------------------- 3 - OPENSOURCE ----------------------*/
@@ -434,9 +388,8 @@ p {
 	width: 100%;
 	height: 80%;
 	left: 0;
-	-o-background-size: 150px 150px;
-	   background-size: 150px 150px;
-	top: 260%;
+  top: 260%;
+	@include background-size(150px 150px);
 }
 
 .opensource {
@@ -445,30 +398,22 @@ p {
   z-index: 2;
   width: 100%;
   top: 36%;
-  -webkit-transform: translate(0, -100%);
-     -moz-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-       -o-transform: translate(0, -100%);
-          transform: translate(0, -100%);
   text-align: center;
   opacity: 0;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  @include transform(translate(0, -100%));
+  @include transition(all 0.5s);
   will-change: opacity;
 }
 
 .opensource-images {
-	position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: 2;
-    will-change: opacity;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  @include transition(all 0.5s);
+  z-index: 2;
+  will-change: opacity;
 }
 
 .opensource h2 {
@@ -499,12 +444,8 @@ p {
   height: auto;
   top: 36%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
   overflow: hidden;
+  @include transform(translate(-50%, 0));
 }
 
 @media (max-width: 800px) {
@@ -528,9 +469,9 @@ p {
 }
 
 #player {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .shadow {
@@ -538,14 +479,8 @@ p {
   height: 50px;
   margin: 0 auto;
   margin-top: -1px;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.07+1,0+100 */
-background: -moz-linear-gradient(top,  rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 1%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-background: gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.07)), color-stop(1%,rgba(0,0,0,0.07)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */ /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-background: -moz-linear-gradient(top,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0) 100%);
-background: linear-gradient(top,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.07+1,0+100 */
+  @include background(linear-gradient(to bottom, rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 1%, rgba(0,0,0,0) 100%));
 }
 
 .empty {
@@ -555,14 +490,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', e
   margin: 0 auto;
   top: -0.5%;
   left: -0.4%;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  @include box-sizing(border-box);
   z-index: 1;
   background-color: rgba(0, 0, 0, .7);
   opacity: 0;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  @include transition(all 0.5s);
 }
 
 .lines {
@@ -657,55 +589,51 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', e
 }
 
 .img1 {
-position: absolute;
-    height: 75.8%;
-    left: 64%;
-    bottom: 0px;
-    z-index: 2;
-    -webkit-transform: translate(0, 23.5%);
-       -moz-transform: translate(0, 23.5%);
-        -ms-transform: translate(0, 23.5%);
-         -o-transform: translate(0, 23.5%);
-            transform: translate(0, 23.5%);
+  position: absolute;
+  height: 75.8%;
+  left: 64%;
+  bottom: 0px;
+  z-index: 2;
+  @include transform(translate(0, 23.5%));
 }
 
 .img2 {
-    position: absolute;
-    z-index: 2;
-    bottom: -157px;
-    right: 48%;
-    height: 44.7%;
+  position: absolute;
+  z-index: 2;
+  bottom: -157px;
+  right: 48%;
+  height: 44.7%;
 }
 
 .img3 {
-position: absolute;
-    z-index: 2;
-    right: 62%;
-    top: 28%;
-    height: 15.4%;
+  position: absolute;
+  z-index: 2;
+  right: 62%;
+  top: 28%;
+  height: 15.4%;
 }
 
 .img4 {
-position: absolute;
-    z-index: 2;
-    right: 64%;
-    top: 38%;
-    height: 34.9%;
+  position: absolute;
+  z-index: 2;
+  right: 64%;
+  top: 38%;
+  height: 34.9%;
 }
 
 .img5 {
-position: absolute;
-    z-index: 2;
-    left: 63%;
-    top: 28%;
-    height: 19.2%;
+  position: absolute;
+  z-index: 2;
+  left: 63%;
+  top: 28%;
+  height: 19.2%;
 }
 
 .img6 {
-    position: absolute;
-    top: 71%;
-    left: 56%;
-    height: 23.7%;
+  position: absolute;
+  top: 71%;
+  left: 56%;
+  height: 23.7%;
 }
 
 /*------------------- 4 - CUSTOMIZE ----------------------*/
@@ -716,29 +644,22 @@ position: absolute;
 	width: 100%;
 	height: 80%;
 	left: 0;
-	-o-background-size: 150px 150px;
-	   background-size: 150px 150px;
-	top: 340%;
+  top: 340%;
+	@include background-size(150px 150px);
 }
 
 .customize {
-position: fixed;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    width: -moz-calc(90vw - 90px);
-    width: calc(90vw - 90px);
-    vertical-align: middle;
-    -webkit-transform: translate(-50%,-50%);
-       -moz-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-         -o-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-    opacity: 0;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    will-change: opacity;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  // width: -moz-calc(90vw - 90px);
+  width: calc(90vw - 90px);
+  vertical-align: middle;
+  opacity: 0;
+  @include transform(translate(-50%,-50%));
+  @include transition(all 0.5s);
+  will-change: opacity;
 }
 
 .customize .text {
@@ -757,14 +678,12 @@ position: fixed;
 }
 
 .customize h2 {
-color: #1455ff;
+  color: #1455ff;
   margin: 0 3vh 1vh 0;
   text-align: left;
   width: 100%;
   font-size: 5.6vw;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  @include transition(all 1s);
 }
 
 @media (max-width: 800px) {
@@ -901,11 +820,7 @@ color: #1455ff;
   height: auto;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(0, -42%);
-     -moz-transform: translate(0, -42%);
-      -ms-transform: translate(0, -42%);
-       -o-transform: translate(0, -42%);
-          transform: translate(0, -42%);
+  @include transform(translate(0, -42%));
 }
 
 @media (max-width: 800px) {
@@ -913,18 +828,14 @@ color: #1455ff;
 		position: relative;
 		width: 100%;
 		left: 0;
-		-webkit-transform: none;
-		   -moz-transform: none;
-		    -ms-transform: none;
-		     -o-transform: none;
-		        transform: none;
+    @include transform(none);
 	}
 }
 
 #player2 {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 /*------------------*/
@@ -939,9 +850,9 @@ color: #1455ff;
 }
 
 #player3 {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .section42 h2 {
@@ -970,14 +881,8 @@ color: #1455ff;
 	right: 5%;
 	z-index: 1;
 	opacity: 0;
-	-webkit-transform: translate(0, -50%);
-	   -moz-transform: translate(0, -50%);
-	    -ms-transform: translate(0, -50%);
-	     -o-transform: translate(0, -50%);
-	        transform: translate(0, -50%);
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+  @include transform(translate(0, -50%));
+  @include transition(all 0.5s);
 	will-change: opacity;
 }
 
@@ -987,65 +892,53 @@ color: #1455ff;
 
 #nuvem1 {
 	left: -20%;
-    top: 17%;
-    z-index: 2;
-    width: 45%;
-    height: auto;
-    -webkit-filter: drop-shadow( -10px 20px 10px rgba(0, 0, 0, .4) );
-            filter: drop-shadow( -10px 20px 10px rgba(0, 0, 0, .4) );
-    -webkit-filter: drop-shadow( -10px 20px 10px rgba(0, 0, 0, .4) );
-            filter: drop-shadow( -10px 20px 10px rgba(0, 0, 0, .4) );
-    @include custom-animation(nuvem, 40s, 0s, linear, infinite, normal, forwards);
+  top: 17%;
+  z-index: 2;
+  width: 45%;
+  height: auto;
+  @include filter(drop-shadow(-10px 20px 10px rgba(0, 0, 0, .4)));
+  @include custom-animation(nuvem, 40s, 0s, linear, infinite, normal, forwards);
 }
 
 #nuvem2 {
-    left: 55%;
-    top: -18%;
-    z-index: 7;
-    width: 54%;
-    height: auto;
-    -webkit-filter: drop-shadow( 10px 10px 6px rgba(0, 0, 0, .3) );
-            filter: drop-shadow( 10px 10px 6px rgba(0, 0, 0, .3) );
-    -webkit-filter: drop-shadow( 10px 10px 6px rgba(0, 0, 0, .3) );
-            filter: drop-shadow( 10px 10px 6px rgba(0, 0, 0, .3) );
-    @include custom-animation(nuvem2, 60s, 0s, ease, infinite, normal, forwards);
+  left: 55%;
+  top: -18%;
+  z-index: 7;
+  width: 54%;
+  height: auto;
+  @include filter(drop-shadow(-10px 20px 6px rgba(0, 0, 0, .3)));
+  @include custom-animation(nuvem2, 60s, 0s, ease, infinite, normal, forwards);
 }
 
 #nuvem3 {
 	left: 85%;
-    top: 51%;
-    z-index: 2;
-    width: 26%;
-    -webkit-filter: drop-shadow( 6px 6px 6px rgba(0, 0, 0, .4) );
-            filter: drop-shadow( 6px 6px 6px rgba(0, 0, 0, .4) );
-    -webkit-filter: drop-shadow( 6px 6px 6px rgba(0, 0, 0, .4) );
-            filter: drop-shadow( 6px 6px 6px rgba(0, 0, 0, .4) );
-    @include custom-animation(nuvem, 100s, 0s, linear, infinite, normal, forwards);
+  top: 51%;
+  z-index: 2;
+  width: 26%;
+  @include filter(drop-shadow(6px 6px 6px rgba(0, 0, 0, .4)));
+  @include custom-animation(nuvem, 100s, 0s, linear, infinite, normal, forwards);
 }
 
 #sol {
-    left: 12%;
-    top: -34%;
-    z-index: 2;
-    width: 34%;
-    height: auto;
-    -webkit-filter: drop-shadow( 8px 10px 6px rgba(0, 0, 0, .1) );
-            filter: drop-shadow( 8px 10px 6px rgba(0, 0, 0, .1) );
-    -webkit-filter: drop-shadow( 8px 10px 16px rgba(0, 0, 0, .1) );
-            filter: drop-shadow( 8px 10px 16px rgba(0, 0, 0, .1) );
-    @include custom-animation(sol, 1.6s, 0s, ease, infinite, normal, forwards);
+  left: 12%;
+  top: -34%;
+  z-index: 2;
+  width: 34%;
+  height: auto;
+  @include filter(drop-shadow(8px 10px 16px rgba(0, 0, 0, .1)));
+  @include custom-animation(sol, 1.6s, 0s, ease, infinite, normal, forwards);
 }
 
 @media (max-width: 800px) {
 	#nuvem1 {
-		  left: -5%;
-		  top: 57%;
-		  width: 31%;
+	  left: -5%;
+	  top: 57%;
+	  width: 31%;
 	}
 	#nuvem2 {
-		  left: 57%;
-  			top: 37%;
-  			width: 37%;
+	  left: 57%;
+		top: 37%;
+		width: 37%;
 	}
 	#nuvem3 {
 		left: 84%;
@@ -1066,17 +959,16 @@ color: #1455ff;
 	width: 100%;
 	height: 130%;
 	left: 0;
-	-o-background-size: 150px 150px;
-	   background-size: 150px 150px;
+	@include background-size(150px 150px);
 	top: 500%;
-	    background-color: #232323;
-    z-index: -1;
+	background-color: #232323;
+  z-index: -1;
 }
 
 #player4 {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .section43 h2 {
@@ -1099,60 +991,54 @@ color: #1455ff;
 
 .blur {
 	position: fixed;
-    z-index: -1;
-    top: 50%;
-    right: 5%;
-    width: 45vw;
-    height: 25vw;
-    -webkit-transform: translate(0, -50%) scale(0.4);
-       -moz-transform: translate(0, -50%) scale(0.4);
-        -ms-transform: translate(0, -50%) scale(0.4);
-         -o-transform: translate(0, -50%) scale(0.4);
-            transform: translate(0, -50%) scale(0.4);
-    opacity: 0;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    will-change: transform;
+  z-index: -1;
+  top: 50%;
+  right: 5%;
+  width: 45vw;
+  height: 25vw;
+  opacity: 0;
+  @include transform(translate(0, -50%) scale(0.4));
+  @include transition(all 0.5s);
+  will-change: transform;
 }
 
 .blur1 {
-    position: absolute;
-    top: 0%;
-    left: 20%;
-    width: 25vw;
-    height: 25vw;
-    border-radius: 100%;
-    box-shadow: 0 0 20vw 10vw #0002ff;
-    background-color: #0002ff;
-    opacity: 0.2;
-    z-index: -1;
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 100%;
+  box-shadow: 0 0 20vw 10vw #0002ff;
+  background-color: #0002ff;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .blur2 {
-    position: absolute;
-    top: -23%;
-    left: -16%;
-    width: 20vw;
-    height: 20vw;
-    border-radius: 100%;
-    box-shadow: 0 0 13vw 7vw #9740c9;
-    background-color: #9740c9;
-    opacity: 0.2;
-    z-index: -1;
+  position: absolute;
+  top: -23%;
+  left: -16%;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 100%;
+  box-shadow: 0 0 13vw 7vw #9740c9;
+  background-color: #9740c9;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .blur3 {
-    position: absolute;
-    top: 42%;
-    left: 59%;
-    width: 25vw;
-    height: 25vw;
-    border-radius: 100%;
-    box-shadow: 0 0 11vw 7vw #1bd3bb;
-    background-color: #1bd3bb;
-    opacity: 0.1;
-    z-index: -1;
+  position: absolute;
+  top: 42%;
+  left: 59%;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 100%;
+  box-shadow: 0 0 11vw 7vw #1bd3bb;
+  background-color: #1bd3bb;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 /*------------------- 5 - MULTIDEVICE ----------------------*/
@@ -1160,8 +1046,7 @@ color: #1455ff;
 .section5 {
 	position: absolute;
 	background: url('/images/bgmulti.jpg') no-repeat center center;
-	-o-background-size: cover;
-	   background-size: cover;
+	@include background-size(cover);
 	background-attachment: fixed;
 	overflow: hidden;
 	width: 100%;
@@ -1178,13 +1063,9 @@ color: #1455ff;
   z-index: 2;
   width: 100%;
   top: 34%;
-  -webkit-transform: translate(0, -100%);
-     -moz-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-       -o-transform: translate(0, -100%);
-          transform: translate(0, -100%);
   text-align: center;
   opacity: 0;
+  @include transform(translate(0, -100%));
   will-change: opacity;
 }
 
@@ -1199,20 +1080,16 @@ color: #1455ff;
 }
 
 #player5 {
-	  position: absolute;
-	  width: 100%;
-	  height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .section5 .video {
 	width: 72vh;
   top: auto;
   bottom: 0%;
-  	-webkit-transform: translate(-50%, -47.5%);
-  	   -moz-transform: translate(-50%, -47.5%);
-  	    -ms-transform: translate(-50%, -47.5%);
-  	     -o-transform: translate(-50%, -47.5%);
-  	        transform: translate(-50%, -47.5%);
+  @include transform(translate(-50%, -47.5%));
 }
 
 .imgdevice {
@@ -1220,12 +1097,8 @@ color: #1455ff;
   left: 50%;
   bottom: 0;
   width: 140vh;
-	-webkit-transform: translate(-50%, 0%);
-	   -moz-transform: translate(-50%, 0%);
-	    -ms-transform: translate(-50%, 0%);
-	     -o-transform: translate(-50%, 0%);
-	        transform: translate(-50%, 0%);
   opacity: 0;
+  @include transform(translate(-50%, 0%));
   will-change: opacity;
 }
 
@@ -1257,12 +1130,8 @@ color: #1455ff;
   z-index: 2;
   width: 100%;
   top: 45%;
-  -webkit-transform: translate(0, -50%);
-     -moz-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-       -o-transform: translate(0, -50%);
-          transform: translate(0, -50%);
   text-align: center;
+  @include transform(translate(0,-50%));
 }
 
 @media (max-width: 800px) {
@@ -1278,31 +1147,29 @@ color: #1455ff;
 
 @media (max-width: 800px) {
 	.cardlist {
-		   text-align: left;
-		   width: 90%;
-		   margin: 0 auto;
+	   text-align: left;
+	   width: 90%;
+	   margin: 0 auto;
 	}
 }
 
 .card {
   position: relative;
   background-color: white;
+  border-radius: 0;
   text-align: left;
   width: 15%;
   display: inline-block;
   vertical-align: top;
   padding-left: 1.6%;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  border-radius: 0;
+  @include transition(all 0.2s);
 }
 
 @media (max-width: 800px) {
 	.card {
-		   width: 29.9%;
-  			margin-bottom: 3px;
-  			padding-left: 3%;
+    width: 29.9%;
+		margin-bottom: 3px;
+		padding-left: 3%;
 	}
 }
 
@@ -1312,7 +1179,7 @@ color: #1455ff;
 }
 
 .card .ficha {
-position: relative;
+  position: relative;
   width: 100%;
   margin-bottom: 160%;
 }
@@ -1330,14 +1197,12 @@ position: relative;
   height: 116px;
   top: 10%;
   margin: 0 auto;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  @include transition(all 0.2s);
 }
 
 @media (max-width: 800px) {
 	.card h3 {
-		   font-size: 4.6vw;
+    font-size: 4.6vw;
 	}
 }
 
@@ -1354,9 +1219,7 @@ position: relative;
   letter-spacing: -0.4px;
   margin: 0;
   top: 38%;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  @include transition(all 0.2s);
 }
 
 .card span {
@@ -1366,9 +1229,7 @@ position: relative;
 	font-size: 18px;
 	font-style: italic;
 	opacity: 0;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+	@include transition(all 0.3s);
 
 }
 
@@ -1383,9 +1244,7 @@ position: relative;
   height: 2px;
   background-color: #333;
   opacity: 0;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  @include transition(all 0.5s);
   display: inline-block;
   margin: 4px 10px;
 }
@@ -1408,8 +1267,7 @@ position: relative;
 	top: 830%;
 	background-color: #232323;
 	background: url('/images/texture.png') repeat center center;
-	-o-background-size: 150px 150px;
-	   background-size: 150px 150px;
+	@include background-size(150px 150px);
 	z-index: 2;
 }
 
@@ -1446,9 +1304,7 @@ position: relative;
 	font-weight: 900;
 	font-size: 19px;
 	color: rgba(255, 255, 255, .4);
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+	@include transition(all 0.3s);
 	line-height: 20px;
 }
 
@@ -1471,9 +1327,7 @@ position: relative;
   height: 2px;
   background-color: #fff;
   opacity: 0;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  @include transition(all 0.5s);
 }
 
 .credits a:hover hr {
@@ -1490,9 +1344,7 @@ position: relative;
 	width: 100%;
 	height: 100%;
 	z-index: 10000;
-	-moz-transition: all 1s;
-	-o-transition: all 1s;
-	transition: all 1s;
+	@include transition(all 1s);
 }
 
 .loader svg {
@@ -1501,11 +1353,7 @@ position: relative;
 	height: 3px;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	   -moz-transform: translate(-50%,-50%);
-	    -ms-transform: translate(-50%,-50%);
-	     -o-transform: translate(-50%,-50%);
-	        transform: translate(-50%,-50%);
+  @include transform(translate(-50%,-50%));
   @include custom-animation(loading, 0.3s, 0s, ease, infinite, alternate, none, running);
 }
 
@@ -1516,17 +1364,7 @@ position: relative;
 	top: 0;
 	left: 0;
 	opacity: 0.2;
-	background: rgb(0,127,101);
-    background: -moz-linear-gradient(-45deg, rgba(0,127,101,1) 0%, rgba(11,47,140,1) 100%);
-    background: gradient(linear, left top, right bottom, color-stop(0%,rgba(0,127,101,1)), color-stop(100%,rgba(11,47,140,1)));
-    background: -o-linear-gradient(-45deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: -moz-linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: -o-linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: linear-gradient(-45deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: -moz-linear-gradient(315deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: -o-linear-gradient(315deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    background: linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007f65', endColorstr='#0b2f8c',GradientType=1 );
+  @include background(linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%));
 }
 
 .leftmenu {
@@ -1539,33 +1377,23 @@ position: relative;
 	cursor: pointer;
 	opacity: 1;
 	background-color: rgba(255, 255, 255, 0.0);
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+  @include transition(all 0.5s);
 }
 
 .leftmenu svg {
-    position: absolute;
-    width: 50px;
-    height: 32px;
-    top: 50%;
-    left: 50%;
-    opacity: 0.5;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-transform: translate(-50%,-50%);
-       -moz-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-         -o-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+  position: absolute;
+  width: 50px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+  @include transition(all 0.5s);
+  @include transform(translate(-50%,-50%));
 }
 
 .leftmenu line {
 	stroke: white;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+  @include transition(all 0.5s);
 	stroke-width: 2px;
 }
 
@@ -1595,80 +1423,63 @@ position: relative;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
+  @include transition(all 0.5s);
 }
 
 .leftmenu-open .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0vw;
-    height: 100%;
-    background-color: black;
-    margin: 0;
-    -moz-box-sizing: border-box;
-         box-sizing: border-box;
-    -moz-transition: all 0.5s cubic-bezier(0.78, 0, 0.17, 1);
-    -o-transition: all 0.5s cubic-bezier(0.78, 0, 0.17, 1);
-    transition: all 0.5s cubic-bezier(0.78, 0, 0.17, 1);
-    will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0vw;
+  height: 100%;
+  background-color: black;
+  margin: 0;
+  @include box-sizing(border-box);
+  @include transition(all 0.5s cubic-bezier(0.78, 0, 0.17, 1));
+  will-change: transform;
 }
 
 .menu ul {
-    position: absolute;
-    padding: 7vw 7vw;
-    opacity: 0;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    will-change: opacity;
+  position: absolute;
+  padding: 7vw 7vw;
+  opacity: 0;
+  @include transition(all 0.5s);
+  will-change: opacity;
 }
 
 .menu a {
-    text-decoration: none;
-    list-style: none;
-    font-style: italic;
-    font-weight: 100;
-    color: white;
-    font-size: 2vw;
+  text-decoration: none;
+  list-style: none;
+  font-style: italic;
+  font-weight: 100;
+  color: white;
+  font-size: 2vw;
 }
 
 .menu hr {
 	width: 5vw;
-    text-align: left;
-    margin: 3vw 0 2.8vw 0.4vw;
-    border: 0;
-    background: rgba(255, 255, 255, 0.3);
-    height: 1px;
+  text-align: left;
+  margin: 3vw 0 2.8vw 0.4vw;
+  border: 0;
+  background: rgba(255, 255, 255, 0.3);
+  height: 1px;
 }
 
 /*-----------------------------------------------------------------------------*/
 
 .show {
 	opacity: 1;
-	-webkit-transform: translate(0, -50%) scale(1);
-	   -moz-transform: translate(0, -50%) scale(1);
-	    -ms-transform: translate(0, -50%) scale(1);
-	     -o-transform: translate(0, -50%) scale(1);
-	        transform: translate(0, -50%) scale(1);
+  @include transform(translate(0, -50%) scale(1));
 }
 
 .giro-in {
 	opacity: 1 !important;
-	-webkit-transform: translate(-50%, -50%) rotateY(0) !important;
-	   -moz-transform: translate(-50%, -50%) rotateY(0) !important;
-	   -ms-transform: translate(-50%, -50%) rotateY(0) !important;
-	        transform: translate(-50%, -50%) rotateY(0) !important;
+  @include transform(translate(-50%, -50%) rotateY(0) !important);
 }
 
 .giro-out {
 	opacity: 0;
-	-webkit-transform: translate(0, -50%) rotateY(90deg);
-	   -moz-transform: translate(0, -50%) rotateY(90deg);
-	   -ms-transform: translate(0, -50%) rotateY(90deg);
-	        transform: translate(0, -50%) rotateY(90deg);
+  @include transform(translate(0, -50%) rotateY(90deg));
 }
 
 .show2 {
@@ -1677,9 +1488,7 @@ position: relative;
 
 .baixo {
 	top: 59% !important;
-	-moz-transition: all 0.5s ease !important;
-	-o-transition: all 0.5s ease !important;
-	transition: all 0.5s ease !important;
+  @include transition(all 0.5s ease !important);
 }
 
 .bgblack {
@@ -1691,14 +1500,8 @@ position: relative;
   height: 28vw !important;
   top: 50% !important;
   left: 50% !important;
-  -webkit-transform: translate(0, -42%) !important;
-     -moz-transform: translate(0, -42%) !important;
-      -ms-transform: translate(0, -42%) !important;
-       -o-transform: translate(0, -42%) !important;
-          transform: translate(0, -42%) !important;
-  -moz-transition: all 0.5s ease !important;
-  -o-transition: all 0.5s ease !important;
-  transition: all 0.5s ease !important;
+  @include transform(translate(0, -42%) !important);
+  @include transition(all 0.5s ease !important);
 }
 
 @media (max-width: 800px) {
@@ -1706,27 +1509,17 @@ position: relative;
 		position: relative;
 		width: 100%;
 		left: 0;
-		-webkit-transform: none;
-		   -moz-transform: none;
-		    -ms-transform: none;
-		     -o-transform: none;
-		        transform: none;
+    @include transform(none);
 	}
 }
 
 .multidevice-video {
-	position: fixed;
-    width: 72vh !important;
-    height: 41vh !important;
-    top: 40.3vh !important;
-    -webkit-transform: translate(-50%, 0%) !important;
-       -moz-transform: translate(-50%, 0%) !important;
-        -ms-transform: translate(-50%, 0%) !important;
-         -o-transform: translate(-50%, 0%) !important;
-            transform: translate(-50%, 0%) !important;
-    -moz-transition: all 0.5s ease !important;
-    -o-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+  position: fixed;
+  width: 72vh !important;
+  height: 41vh !important;
+  top: 40.3vh !important;
+  @include transform(translate(-50%, 0%) !important);
+  @include transition(all 0.5s ease !important);
 }
 
 .none {
