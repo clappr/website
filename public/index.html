@@ -4,59 +4,58 @@
     <meta charset="UTF-8"/>
     <title>Clappr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/estilo.css"/> -->
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/animation.css"/> -->
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/logo.css"/> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
     <script type="text/javascript" src="vendors/jquery-1.12.0.min.js"></script>
-    <!-- <script type="text/javascript" src="vendors/jquery.fullPage.js"></script> -->
     <script type="text/javascript" src="clappr-website.js"></script>
 
   </head>
-  <body>
+  <body class="clappr-ws">
     <!------------ 1 - APRESENTAÇÃO ------------>
-    <div id="1" class="presentation">
-      <div id="bgvideo">
+    <div id="1" class="clappr-ws__section clappr-ws__section--presentation">
+      <div id="bgvideo" class="clappr-ws__player clappr-ws__presentation-video">
         <script>var player = new Clappr.Player({source: "media/video.mp4", parentId:"#bgvideo", width: "100%", height: "100%", autoPlay: true, loop: true, chromeless: true, mute: true});</script>
       </div>
-      <div id="textura"></div>
-      <header>
-        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="508" height="202.667" viewBox="0 0 508 202.667" xml:space="preserve"><g fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M125.171 19.253H64.693m439.099 0H145.433m161.708 164.661h136.85m-228.506 0h71.396m-281.839 0H195.18M155.953 29.384c-2.258 6.186-5.383 14.769-8.488 23.362-3.107 8.6-6.996 16.074-17.917 26.996-6.542 6.541-14.15 14.15-21.757 21.757-20.322 20.322-40.625 40.627-40.625 40.627-4.488 4.486-9.055 8.125-13.543 8.125H33.3c-8.975 0-13.602-7.275-10.336-16.252l23.659-65.001c3.267-8.977 10.481-16.252 19.457-16.252h22.438m67.139 45.578c-1.058 1.057-2.117 2.115-3.177 3.176-20.323 20.322-40.627 40.627-40.627 40.627-4.486 4.486-9.054 8.125-13.541 8.125H95.66c-4.487 0-6.801-3.639-5.168-8.125 0 0 7.39-20.305 14.787-40.627 7.39-20.304 32.53-89.379 32.53-89.379 1.634-4.487 3.887-8.125 8.374-8.125h5.482c4.672 0 7.432 1.971 8.543 5.127"/><path d="M291.723 198.994l52.865-145.229s.291-1.023-.434-1.023c-.834 0-1.463.834-1.463.834s-40.668 40.668-47.916 47.917l-32.5 32.5c-8.975 8.975-6.268 16.252 2.707 16.252h.133c8.975 0 16.189-7.277 19.457-16.252 0 0 5.916-16.256 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.266-8.975 1.502-16.25-7.473-16.25h-2.732c-4.482 0-9.041 3.639-13.523 8.125l-52.65 52.774-28.479 28.479c-4.487 4.488-8.987 8.133-13.475 8.133h-1.413c-.558 0-.846-.443-.643-.992l18.992-52.524-45.442 45.384c-4.487 4.488-9.055 8.127-13.542 8.127h-2.923c-4.487 0-6.801-3.639-5.168-8.127l14.721-40.623 11.83-32.505c3.267-8.975 10.481-16.25 19.456-16.25h20.855c7.553 0 12.026 5.152 11.308 12.135"/><path d="M400.772 150.148c25.619-70.39 35.111-96.472 35.111-96.472s.293-1.021-.432-1.021c-.834 0-1.463.834-1.463.834l-47.916 47.917-8.453 8.457-24.043 24.043c-8.975 8.975-6.266 16.25 2.709 16.25h.131c8.975 0 16.189-7.275 19.457-16.25 0 0 5.916-16.258 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.268-8.975 1.348-16.25-7.627-16.25h-2.721c-4.482 0-8.898 3.637-13.381 8.125 0 0-20.301 20.322-40.582 40.628-3.768 3.771-10.895 10.912-12.561 12.58"/><path d="M486.95 64.877c.756-7.018-3.723-12.205-11.301-12.205h-.762c-4.482 0-9.043 3.639-13.525 8.125 0 0-20.301 20.324-40.582 40.628-.668.67-2.631 2.611-3.596 3.562M199.801 199.171s45.834-125.932 53.23-146.255"/></g></svg>
-        <div class="line-header"></div>
-      </header>
-      <div class="logo">
-        <div class="sprite"></div>
+      <div class="clappr-ws__gradient"></div>
+      <div class="clappr-ws__after-logo">
+        <svg version="1.1" id="logo" class="clappr-ws__after-logo-svg" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="508" height="202.667" viewBox="0 0 508 202.667" xml:space="preserve"><g fill-rule="evenodd" clip-rule="evenodd" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M125.171 19.253H64.693m439.099 0H145.433m161.708 164.661h136.85m-228.506 0h71.396m-281.839 0H195.18M155.953 29.384c-2.258 6.186-5.383 14.769-8.488 23.362-3.107 8.6-6.996 16.074-17.917 26.996-6.542 6.541-14.15 14.15-21.757 21.757-20.322 20.322-40.625 40.627-40.625 40.627-4.488 4.486-9.055 8.125-13.543 8.125H33.3c-8.975 0-13.602-7.275-10.336-16.252l23.659-65.001c3.267-8.977 10.481-16.252 19.457-16.252h22.438m67.139 45.578c-1.058 1.057-2.117 2.115-3.177 3.176-20.323 20.322-40.627 40.627-40.627 40.627-4.486 4.486-9.054 8.125-13.541 8.125H95.66c-4.487 0-6.801-3.639-5.168-8.125 0 0 7.39-20.305 14.787-40.627 7.39-20.304 32.53-89.379 32.53-89.379 1.634-4.487 3.887-8.125 8.374-8.125h5.482c4.672 0 7.432 1.971 8.543 5.127"/><path d="M291.723 198.994l52.865-145.229s.291-1.023-.434-1.023c-.834 0-1.463.834-1.463.834s-40.668 40.668-47.916 47.917l-32.5 32.5c-8.975 8.975-6.268 16.252 2.707 16.252h.133c8.975 0 16.189-7.277 19.457-16.252 0 0 5.916-16.256 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.266-8.975 1.502-16.25-7.473-16.25h-2.732c-4.482 0-9.041 3.639-13.523 8.125l-52.65 52.774-28.479 28.479c-4.487 4.488-8.987 8.133-13.475 8.133h-1.413c-.558 0-.846-.443-.643-.992l18.992-52.524-45.442 45.384c-4.487 4.488-9.055 8.127-13.542 8.127h-2.923c-4.487 0-6.801-3.639-5.168-8.127l14.721-40.623 11.83-32.505c3.267-8.975 10.481-16.25 19.456-16.25h20.855c7.553 0 12.026 5.152 11.308 12.135"/><path d="M400.772 150.148c25.619-70.39 35.111-96.472 35.111-96.472s.293-1.021-.432-1.021c-.834 0-1.463.834-1.463.834l-47.916 47.917-8.453 8.457-24.043 24.043c-8.975 8.975-6.266 16.25 2.709 16.25h.131c8.975 0 16.189-7.275 19.457-16.25 0 0 5.916-16.258 11.828-32.5 5.918-16.259 11.83-32.503 11.83-32.503 3.268-8.975 1.348-16.25-7.627-16.25h-2.721c-4.482 0-8.898 3.637-13.381 8.125 0 0-20.301 20.322-40.582 40.628-3.768 3.771-10.895 10.912-12.561 12.58"/><path d="M486.95 64.877c.756-7.018-3.723-12.205-11.301-12.205h-.762c-4.482 0-9.043 3.639-13.525 8.125 0 0-20.301 20.324-40.582 40.628-.668.67-2.631 2.611-3.596 3.562M199.801 199.171s45.834-125.932 53.23-146.255"/></g></svg>
+        <div class="clappr-ws__line-header"></div>
       </div>
-      <div class="future">
-        <h2>An extensible media player for applications</h2>
-        <a class="bt_github" href="https://github.com/clappr"><span>See on github</span><hr></a>
+      <div class="clappr-ws__before-logo">
+        <div class="clappr-ws__sprite"></div>
       </div>
-      <div class="horizontal"></div>
-      <div class="scroll">
-        <span>Getting Started</span>
-        <div class="line"></div>
+      <div class="clappr-ws__branding">
+        <h2 class="clappr-ws__title clappr-ws__branding-text">An extensible media player for applications</h2>
+        <a class="clappr-ws__branding-button" href="https://github.com/clappr">
+          <span class="clappr-ws__branding-button-text">See on github</span>
+          <hr class="clappr-ws__branding-button-anim"></hr>
+        </a>
+      </div>
+      <div class="clappr-ws__bottom-section-anim"></div>
+      <div class="clappr-ws__initial-scroll">
+        <span class="clappr-ws__initial-scroll-text">Getting Started</span>
+        <div class="clappr-ws__initial-scroll-line"></div>
       </div>
     </div>
 
     <!--------------- SECTION 2 - GETTING STARTED -------------->
-    <div id="2" class="section2">
-      <div class="start none">
-        <h2>Simple.</h2>
-        <p>Just import it, plug it in your page and it’s ready to play.</p>
-        <div class="boxcode">
-          <span class="title">Import</span>
-          <pre>
-            <code class="import-code">
+    <div id="2" class="clappr-ws__section clappr-ws__section--get-started">
+      <div class="clappr-ws__how-to none">
+        <h2 class="clappr-ws__title clappr-ws__title--get-started">Simple.</h2>
+        <p class="clappr-ws__text">Just import it, plug it in your page and it’s ready to play.</p>
+        <div class="clappr-ws__boxcode">
+          <span class="clappr-ws__boxcode-title">Import</span>
+          <pre class="clappr-ws__boxcode-pre-tag">
+            <code class="clappr-ws__boxcode-import">
 &lt;head&gt;
   &lt;script type="text/javascript" src="http://cdn.clappr.io/latest/clappr.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
             </code>
           </pre>
         </div>
-        <div class="boxcode">
-          <span class="title">Plug</span>
-          <pre>
-            <code class="plug-code">
+        <div class="clappr-ws__boxcode">
+          <span class="clappr-ws__boxcode-title">Plug</span>
+          <pre class="clappr-ws__boxcode-pre-tag">
+            <code class="clappr-ws__boxcode-plug">
 &lt;body&gt;
   &lt;div id="player"&gt;&lt;/div&gt;
   &lt;script&gt;
@@ -67,7 +66,7 @@
           </pre>
         </div>
       </div>
-      <div class="video none">
+      <div class="clappr-ws__video-example none">
         <div class="v">
           <div class="empty none">
             <div class="lines">
@@ -91,178 +90,175 @@
                 <span class="square s5"></span>
             </div>
           </div>
-          <div id="player1"></div>
-          <script>var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player1", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});</script>
+          <div id="player" class="clappr-ws__player"></div>
+          <script>var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});</script>
         </div>
-        <!-- <div class="shadow"></div> -->
       </div>
     </div>
-    <div class="section21"></div>
+    <div class="clappr-ws__section clappr-ws__section--running-example"></div>
 
-    <!--------------- SECTION 3 - cus SOURCE -------------->
-    <div id="3" class="section3">
-      <div class="opensource none">
-        <h2>Make it your way</h2>
-        <p>Clappr is 100% Open Source and extensible. <a href="">See how to build your own plugins and create new amazing video experiences.</a></p>
+    <!--------------- SECTION 3 - SOURCE -------------->
+    <div id="3" class="clappr-ws__section clappr-ws__section--open-source">
+      <div class="clappr-ws__opensource-text none">
+        <h2 class="clappr-ws__title clappr-ws__title--opensource">Make it your way</h2>
+        <p class="clappr-ws__text clappr-ws__text--open-source">Clappr is 100% Open Source and extensible. <a href="">See how to build your own plugins and create new amazing video experiences.</a></p>
       </div>
-      <div class="opensource-images none">
-        <img class="img2" src="images/card2.png">
-        <img class="img3" src="images/card3.png">
-        <img class="img4" src="images/card4.png">
-        <img class="img5" src="images/card5.png">
-        <img class="img6" src="images/card6.png">
-        <img class="img1" src="images/card1.png">
+      <div class="clappr-ws__opensource-images none">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--second" src="images/card2.png">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--third" src="images/card3.png">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--fourth" src="images/card4.png">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--fifth" src="images/card5.png">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--sixth" src="images/card6.png">
+        <img class="clappr-ws__opensource-image clappr-ws__opensource-image--first" src="images/card1.png">
       </div>
     </div>
 
     <!--------------- SECTION 4 - CUSTOMIZE -------------->
-    <div id="4" class="section4">
-      <div class="customize none">
-        <div class="text">
-          <h2>Its just fits to your Product</h2>
-          <p>You can customize everything in Clappr UI. Create a chromeless video experience or change the UX to make it perfect for you. Simple use <b>Html 5</b> and <b>CSS3</b>.</p>
-          <div class="circles">
-            <div class="circle blue">1</div>
-            <div class="circle2">2</div>
-            <div class="circle3">3</div>
+    <div id="4" class="clappr-ws__section clappr-ws__section--customize-first">
+      <div class="clappr-ws__customize-container none">
+        <div class="clappr-ws__customize-text">
+          <h2 class="clappr-ws__title clappr-ws__title--customize">Its just fits to your Product</h2>
+          <p class="clappr-ws__text clappr-ws__text--customize">You can customize everything in Clappr UI. Create a chromeless video experience or change the UX to make it perfect for you. Simple use <b>Html 5</b> and <b>CSS3</b>.</p>
+          <div class="clappr-ws__circles">
+            <div class="clappr-ws__circle clappr-ws__circle--to-left blue">1</div>
+            <div class="clappr-ws__circle clappr-ws__circle--to-center">2</div>
+            <div class="clappr-ws__circle clappr-ws__circle--to-right">3</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="section42">
-      <div class="infantil none">
+    <div class="clappr-ws__section clappr-ws__section--customize-second">
+      <div class="clappr-ws__infantil-theme none">
         <svg id="nuvem1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.5 120.5"><path fill="#FFF" d="M331.995 91.1c-13.167-8.598-39.32-7.897-57.521-.978.691-1.619 1.07-3.31 1.07-5.044 0-11.643-16.521-21.135-37.259-21.648-.302-5.383-4.731-9.658-10.183-9.658-1.191 0-2.338.219-3.399.598.255-1.973.397-3.977.397-6.016C225.105 22.752 204.404 2 178.869 2c-21.475 0-39.523 14.677-44.725 34.57-2.562-2.039-5.795-3.268-9.319-3.268-8.291 0-15.012 6.739-15.012 15.051 0 1.355.195 2.662.53 3.912-4.41-.584-9.007-.898-13.741-.898-32.5 0-58.848 14.555-58.848 32.51 0 2.27.424 4.484 1.226 6.624-8.64-1.716-18.545-2.251-25.245 1.806-14.305 8.66-11.087 24.08 9.61 24.08h306.248c15.895 0 17.252-15.591 2.402-25.287z"/><path opacity=".4" fill="#CFD8E5" d="M268.285 97.9c.282-.479.446-.924.518-1.343l-1.702.647 1.127-2.641c-7.351-8.488-78.494.25-100.192-19.414-20.165-18.274-13.322-60.014 13.848-69.032-1-.069-2.003-.117-3.015-.117-19.192 0-35.993 12.987-40.855 31.582l-1.554 5.942-4.807-3.825c-1.972-1.569-4.333-2.398-6.828-2.398-6.072 0-11.012 4.958-11.012 11.051 0 .935.132 1.902.394 2.877l1.551 5.787-5.94-.787c-4.325-.573-8.771-.863-13.215-.863-29.731 0-54.848 13.056-54.848 28.51 0 1.743.327 3.5.972 5.221l2.521 6.726-7.045-1.398c-4.05-.805-7.771-1.213-11.061-1.213-4.763 0-8.576.847-11.333 2.517-4.968 3.007-7.577 7.102-6.648 10.431.84 3.011 5.008 6.228 14.187 6.228h300.836c5.216-11.94-31.852-18.105-55.899-14.488z"/><path opacity=".4" fill="#CFD8E5" d="M250.286 85.402c-15-21.5-95 14-118.75 4.5s-18.25-26-7.25-33c-5.207-2.278-7.114-11.318-5.547-17.638-2.966 1.982-4.926 5.365-4.926 9.202 0 .935.132 1.902.394 2.877l1.551 5.787-5.94-.787c-4.325-.573-8.771-.863-13.215-.863-29.731 0-54.848 13.056-54.848 28.51 0 1.743.327 3.5.972 5.221l2.521 6.726-7.045-1.398c-4.05-.805-7.771-1.213-11.061-1.213-4.763 0-8.576.847-11.333 2.517-4.968 3.007-7.577 7.102-6.648 10.431.84 3.011 5.008 6.228 14.187 6.228h216.138c10.275-7.564 17.578-17.386 10.8-27.1z"/><path opacity=".4" fill="#CFD8E5" d="M75.445 57.772C55.861 62.174 41.754 72.408 41.754 83.99c0 1.743.327 3.5.972 5.221l2.521 6.726-7.045-1.398c-4.05-.805-7.771-1.213-11.061-1.213-4.763 0-8.576.847-11.333 2.517-4.968 3.007-7.577 7.102-6.648 10.431.84 3.011 5.008 6.228 14.187 6.228h111.942c-65.352-13.154-73.017-41.22-59.844-54.73z"/></svg>
         <svg id="nuvem2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.57 124.895"><path fill="#FFF" d="M321.855 85.181c-8.624-6.271-23.95-7.205-37.465-4.185 1.303-2.917 1.789-5.896 1.273-8.79-2.143-12.128-20.768-18.242-41.6-13.653-2.504.552-4.926 1.233-7.242 2.026-.729-4.407-4.188-7.747-8.344-7.747-2.481 0-4.713 1.2-6.267 3.104-3.565-19.59-19.075-34.332-37.668-34.332-14.243 0-26.668 8.657-33.311 21.513-.852-.205-1.734-.319-2.641-.319-6.894 0-12.482 6.243-12.482 13.94 0 1.195.149 2.351.402 3.457-9.089 1.334-16.017 5.654-18.089 12.293-.964 3.093-.77 6.368.382 9.62-.71-.32-1.489-.501-2.307-.501-3.31 0-5.991 2.912-5.991 6.505 0 .722.112 1.41.311 2.06-19.386-1.57-26.137-3.873-43.926-3.873-36.926 0-56.842 20.021-44.933 22.31h297.896c13.221-.005 14.35-14.446 2.002-23.428z"/><path opacity=".4" fill="#CFD8E5" d="M326.211 101.186c.999-3.073-.674-8.38-6.709-12.771-4.504-3.275-11.69-5.079-20.235-5.079-4.583 0-9.426.541-14.004 1.563l-7.772 1.737 3.248-7.271c1.015-2.271 1.347-4.443.987-6.458-1.255-7.107-10.928-11.88-24.068-11.88-4.136 0-8.42.482-12.732 1.432-2.316.511-4.607 1.151-6.807 1.904l-4.471 1.53-.771-4.661c-.422-2.55-2.271-4.4-4.397-4.4-1.597 0-2.67 1.023-3.168 1.633l-5.481 6.716-1.553-8.529c-3.114-17.108-16.097-29.746-31.355-30.946 11.766 8.505 15.235 29.278 7.821 40.232-25.76 38.07-147.958 43.306-159.463 30.308-6.869 2.982-11.004 6.374-12.323 8.361h296.898c2.391 0 5.436-.594 6.355-3.421z"/><path opacity=".4" fill="#CFD8E5" d="M122.426 91.324c2.395 4.551 7.979 5.299 8.705 5.377-2.268-.23-57.057-5.723-75.89.793-5.847 2.021-10.332 4.431-13.469 7.113h278.082c2.393-.001 5.438-.595 6.356-3.422.999-3.073-.674-8.38-6.709-12.771-4.504-3.275-11.69-5.079-20.235-5.079-4.583 0-9.426.541-14.004 1.563l-7.772 1.737 3.248-7.271c1.015-2.271 1.347-4.443.987-6.458-1.088-6.163-8.511-10.564-19.03-11.627 10.746 5.751 12.097 17.241-.002 26.71-17.692 13.848-15.643 11.28-73.082.513-40.817-7.653-58.841-5.465-64.937-1.81l1.033 2.916-2.923-1.318c-.794 1.044-.846 2.109-.358 3.034z"/></svg>
         <svg id="nuvem3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.018 81.014"><path fill="#FFF" d="M194.095 59.139c-7.492-4.887-22.375-4.49-32.729-.555.396-.921.609-1.88.609-2.868 0-6.612-9.4-12.008-21.199-12.301-.172-3.062-2.691-5.488-5.793-5.488-.68 0-1.328.123-1.936.338.146-1.119.229-2.259.229-3.417 0-14.549-11.775-26.343-26.311-26.343-12.217 0-22.488 8.341-25.447 19.646-1.458-1.155-3.298-1.854-5.303-1.854-4.718 0-8.542 3.83-8.542 8.554 0 .771.11 1.512.302 2.225-2.51-.332-5.125-.515-7.816-.515-18.492 0-33.483 8.271-33.483 18.477 0 1.29.241 2.549.697 3.764-4.916-.975-10.555-1.278-14.364 1.025-8.143 4.92-6.312 13.683 5.467 13.683H192.73c9.041-.003 9.814-8.862 1.365-14.371z"/><path opacity=".4" fill="#CFD8E5" d="M196.897 68.575c.498-1.677-.867-4.594-4.44-6.924-3.063-1.998-7.97-3.099-13.812-3.099-5.562 0-11.471 1.033-16.211 2.836l-6.616 2.515 2.793-6.503c.246-.573.366-1.124.366-1.685 0-4.273-7.343-9.03-18.273-9.302l-2.766-.068-.155-2.763c-.028-.494-.194-.946-.445-1.339-.927 2.466-3.712 5.141-5.828 6.136-10.625 5-27.875 3-38.625-6.5s-19.25-2.25-17.75 1.375C64.76 41.004 26.76 54.629 37.01 63.504c-11.311-1.825-22.409.548-24.866 5.411 1.119.883 3.141 1.594 6.334 1.594h174.253c1.078.001 3.647-.188 4.166-1.934z"/><path opacity=".4" fill="#CFD8E5" d="M120.259 43.882c-11.25 16.375-82.875 8.875-90.25 21.5-1.225 2.098-1.393 3.775-.848 5.128h163.568c1.08 0 3.649-.189 4.168-1.935.498-1.677-.867-4.594-4.44-6.924-3.063-1.998-7.97-3.099-13.812-3.099-5.562 0-11.471 1.033-16.211 2.836l-6.616 2.515 2.793-6.503c.246-.573.366-1.124.366-1.685 0-4.273-7.343-9.03-18.273-9.302l-2.766-.068-.155-2.763c-.102-1.799-1.919-3.13-3.733-2.49l-4.604 1.629.63-4.844c.135-1.039.203-2.058.203-3.03 0-10.324-6.73-19.099-16.026-22.169 8.515 6.922 13.496 20.303 6.006 31.204z"/></svg>
         <svg id="sol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.379 231.646"><path opacity=".7" fill-rule="evenodd" clip-rule="evenodd" fill="#FABB14" d="M56.429 132.044c1.884 5.803-7.439 14.255-14.519 16.33-7.08 2.074-15.897 10.298-7.834 29.665-2.319-10.458 3.336-17.505 15.405-16.18 12.068 1.324 14.536-5.84 19.396-3.924 4.859 1.92 9.151 13.862.352 20.622-8.8 6.758-1.082 20.721 1.055 22.781-1.871-9.19 3.292-12.65 9.171-13.352 5.879-.701 9.008-6.781 11.24-9.402 2.463-2.892 4.883-4.283 7.632-3.079 4.253 1.862 4.806 12.938 2.616 19.984s-.22 18.939 20.375 22.941c-9.995-3.856-12.734-12.466-4.953-21.785 7.783-9.32 3.181-15.34 7.466-18.327 4.288-2.986 16.609.047 17.371 11.118.76 11.068 16.662 12.368 19.562 11.727-8.692-3.525-8.718-9.742-6.048-15.026 2.67-5.285.097-11.671-.529-15.056-.627-3.386 1.131-8.723 4.717-11.282 4.412-3.149 15.078-.175 20.432 4.935 5.353 5.107 16.907 8.654 29.644-8.014-7.899 7.233-16.847 5.845-21.758-5.291-4.911-11.137-12.36-9.7-13.139-14.875-.777-5.178 7.418-14.866 17.696-10.604 10.275 4.263 21.323-7.797 22.036-10.681-7.026 6.216-14.989 3.521-18.549-1.232-3.562-4.752-5.895-5.549-9.21-6.5-3.318-.95-4.729-1.377-7.003-5.406-4.431-7.854 2.608-14.637 9.709-16.718 7.102-2.082 15.95-10.315 7.883-29.681 2.315 10.458-3.36 17.513-15.461 16.198-12.1-1.314-14.58 5.855-19.452 3.94-4.871-1.914-9.164-13.856-.334-20.625 8.828-6.769 1.103-20.729-1.041-22.789 1.87 9.192-3.31 12.658-9.206 13.364-10.127 1.213-10.782 11.397-15.433 10.698-8.918-1.34-8.15-11.123-5.954-18.189 2.195-7.066.233-18.992-20.361-22.989 9.994 3.859 12.727 12.491 4.936 21.842-7.79 9.352-3.19 15.384-7.481 18.382-4.289 2.999-16.612-.034-17.365-11.134-.751-11.1-16.656-12.39-19.556-11.745 8.691 3.529 8.711 9.762 6.038 15.063-2.675 5.301.603 12.613 1.043 16.034.64 4.964-4.063 2.658-6.333 5.274-5.909 6.812-13.964 5.073-19.301-.021-5.337-5.094-16.866-8.619-29.608 8.048 7.898-7.238 16.827-5.863 21.715 5.251 4.887 11.115 12.326 9.668 13.095 14.836.768 5.167-7.428 14.855-17.682 10.616-10.253-4.241-18.487 9.422-19.202 12.305 7.023-6.217 12.602-3.475 16.148 1.265 3.547 4.741 10.78 4.785 14.09 5.729 3.309.946 5.543 2.04 6.489 4.959z"/><path opacity=".6" fill-rule="evenodd" clip-rule="evenodd" fill="#FFCB00" d="M55.786 151.269c3.812 5.748-3.777 17.778-10.856 22.186s-14.187 16.035.467 34.679c-5.697-10.685-1.677-20.073 11.866-22.29 13.543-2.219 14.058-10.769 19.93-10.154 5.875.614 14.169 12.317 6.638 22.346-7.532 10.029 5.107 22.892 8.06 24.487-4.826-9.44-.254-14.773 5.935-17.32 6.189-2.546 7.753-10.116 9.389-13.646 1.806-3.896 4.018-6.145 7.376-5.668 5.197.737 9.156 12.631 8.91 20.966-.248 8.336 5.505 20.69 29.143 18.801-12.052-1.166-17.646-9.71-11.999-22.219 5.646-12.509-1.19-17.666 2.57-22.219 3.763-4.553 18.1-4.987 22.287 6.835 4.185 11.823 21.894 8.414 24.856 6.838-10.535-1.203-12.447-7.964-11.144-14.527 1.305-6.564-3.435-12.739-5.143-16.234-1.709-3.496-1.415-9.84 1.715-13.715 3.849-4.77 16.363-4.764 23.743-.825 7.378 3.939 21.035 4.298 29.85-17.716-6.408 10.273-16.572 11.475-25.297.838-8.727-10.638-16.402-6.813-18.818-12.213-2.416-5.4 3.568-18.436 16.052-16.913 12.482 1.524 20.854-14.956 20.756-18.314-5.766 8.899-15.254 8.381-20.571 4.286-5.318-4.096-8.101-4.257-12-4.286-3.9-.029-5.565-.064-9.265-3.763-7.207-7.207-1.599-16.729 5.502-21.149 7.101-4.421 14.239-16.069-.419-34.709 5.694 10.687 1.652 20.089-11.924 22.328-13.572 2.238-14.099 10.796-19.984 10.19-5.885-.607-14.182-12.309-6.619-22.357 7.56-10.048-5.087-22.907-8.045-24.499 4.823 9.442.235 14.787-5.972 17.345-10.659 4.392-8.284 15.68-13.56 16.33-10.118 1.247-12.247-9.64-12.001-18 .248-8.36-5.505-20.751-29.143-18.857 12.052 1.17 17.647 9.74 12 22.286s1.19 17.72-2.571 22.286c-3.762 4.566-18.099 5.001-22.286-6.857-4.185-11.858-21.894-8.439-24.856-6.857 10.535 1.207 12.447 7.988 11.143 14.572s4.483 13.55 6 17.143c2.201 5.211-3.619 4.126-5.297 7.664-4.368 9.209-13.667 9.76-21.023 5.832s-20.98-4.269-29.797 17.743c6.403-10.276 16.543-11.488 25.237-.868 8.692 10.62 16.353 6.79 18.758 12.183 2.404 5.395-3.582 18.429-16.034 16.922-12.451-1.508-17.271 15.868-17.176 19.224 5.762-8.899 12.668-7.607 17.968-3.521 5.3 4.087 13.188 1.94 17.079 1.965 3.889.017 6.653.532 8.57 3.421z"/><path opacity=".9" fill-rule="evenodd" clip-rule="evenodd" fill="#FFCB00" d="M55.786 151.269c3.812 5.748-3.777 17.778-10.856 22.186s-14.187 16.035.467 34.679c-5.697-10.685-1.677-20.073 11.866-22.29 13.543-2.219 14.058-10.769 19.93-10.154 5.875.614 14.169 12.317 6.638 22.346-7.532 10.029 5.107 22.892 8.06 24.487-4.826-9.44-.254-14.773 5.935-17.32 6.189-2.546 7.753-10.116 9.389-13.646 1.806-3.896 4.018-6.145 7.376-5.668 5.197.737 9.156 12.631 8.91 20.966-.248 8.336 5.505 20.69 29.143 18.801-12.052-1.166-17.646-9.71-11.999-22.219 5.646-12.509-1.19-17.666 2.57-22.219 3.763-4.553 18.1-4.987 22.287 6.835 4.185 11.823 21.894 8.414 24.856 6.838-10.535-1.203-12.447-7.964-11.144-14.527 1.305-6.564-3.435-12.739-5.143-16.234-1.709-3.496-1.415-9.84 1.715-13.715 3.849-4.77 16.363-4.764 23.743-.825 7.378 3.939 21.035 4.298 29.85-17.716-6.408 10.273-16.572 11.475-25.297.838-8.727-10.638-16.402-6.813-18.818-12.213-2.416-5.4 3.568-18.436 16.052-16.913 12.482 1.524 20.854-14.956 20.756-18.314-5.766 8.899-15.254 8.381-20.571 4.286-5.318-4.096-8.101-4.257-12-4.286-3.9-.029-5.565-.064-9.265-3.763-7.207-7.207-1.599-16.729 5.502-21.149 7.101-4.421 14.239-16.069-.419-34.709 5.694 10.687 1.652 20.089-11.924 22.328-13.572 2.238-14.099 10.796-19.984 10.19-5.885-.607-14.182-12.309-6.619-22.357 7.56-10.048-5.087-22.907-8.045-24.499 4.823 9.442.235 14.787-5.972 17.345-10.659 4.392-8.284 15.68-13.56 16.33-10.118 1.247-12.247-9.64-12.001-18 .248-8.36-5.505-20.751-29.143-18.857 12.052 1.17 17.647 9.74 12 22.286s1.19 17.72-2.571 22.286c-3.762 4.566-18.099 5.001-22.286-6.857-4.185-11.858-21.894-8.439-24.856-6.857 10.535 1.207 12.447 7.988 11.143 14.572s4.483 13.55 6 17.143c2.201 5.211-3.619 4.126-5.297 7.664-4.368 9.209-13.667 9.76-21.023 5.832s-20.98-4.269-29.797 17.743c6.403-10.276 16.543-11.488 25.237-.868 8.692 10.62 16.353 6.79 18.758 12.183 2.404 5.395-3.582 18.429-16.034 16.922-12.451-1.508-17.271 15.868-17.176 19.224 5.762-8.899 12.668-7.607 17.968-3.521 5.3 4.087 13.188 1.94 17.079 1.965 3.889.017 6.653.532 8.57 3.421z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFE76E" d="M133.406 168.361c-28.554 9.24-59.193-6.413-68.434-34.96s6.415-59.18 34.968-68.418c28.555-9.24 59.194 6.413 68.435 34.961 9.241 28.547-6.415 59.18-34.969 68.417z"/><path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFEB99" d="M95.497 104.512c-7.561 2.446-15.672-1.698-18.12-9.257-2.447-7.559 1.698-15.669 9.26-18.115 7.56-2.446 15.673 1.698 18.12 9.256 2.446 7.56-1.7 15.67-9.26 18.116z"/><path opacity=".3" fill-rule="evenodd" clip-rule="evenodd" fill="#FFCB00" d="M168.518 100.105c-6.649-20.543-24.381-34.407-44.44-37.125 2.242 4.118 4.141 8.498 5.637 13.121 11.412 35.252-4.102 72.758-35.176 90.285 11.86 5.334 25.663 6.457 39.011 2.138 28.553-9.24 44.209-39.871 34.968-68.419z"/><path opacity=".3" fill-rule="evenodd" clip-rule="evenodd" fill="#FFCB00" d="M168.779 100.104c-8.024-24.793-32.191-39.849-57.113-37.331 16.677 1.866 31.542 13.213 37.044 30.212 7.492 23.146-5.201 47.98-28.353 55.472-23.151 7.491-47.992-5.199-55.484-28.346-.929-2.87-1.546-5.767-1.873-8.653-.724 7.239-.009 14.739 2.375 22.101 9.241 28.549 39.88 44.202 68.435 34.962 28.555-9.237 44.21-39.869 34.969-68.417z"/><path opacity=".3" fill-rule="evenodd" clip-rule="evenodd" fill="#FFB600" d="M167.215 109.056c-2.317 22.873-17.788 43.335-41.066 50.867-13.285 4.298-26.972 3.683-39.123-.816 12.738 8.796 29.276 11.783 45.144 6.649 24.356-7.879 38.797-32.193 35.045-56.7z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#5E1D00" d="M106.372 100.119c-.451-2.727-3.027-4.572-5.754-4.121-2.727.45-4.574 3.025-4.123 5.752.45 2.727 3.026 4.573 5.753 4.122 2.728-.45 4.574-3.025 4.124-5.753zm24.627-.081c-.419-2.532-2.811-4.246-5.344-3.828-2.532.418-4.245 2.81-3.827 5.341.417 2.533 2.81 4.246 5.342 3.828 2.534-.418 4.247-2.809 3.829-5.341zm19.5-3.418c-1.157-.246-2.29.505-2.529 1.676-2.595 12.767-11.815 23.173-24.065 27.161-14.8 4.819-30.917-.497-40.105-13.227-.7-.97-2.041-1.183-2.995-.48-.954.703-1.162 2.058-.462 3.026 9.077 12.577 24.196 18.689 39.012 16.242 1.97-.325 3.936-.803 5.879-1.435 13.709-4.463 24.03-16.111 26.935-30.398.237-1.171-.509-2.319-1.67-2.565z"/><path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" fill="#FFEB99" d="M100.07 100.751c-1.103.357-2.286-.247-2.643-1.35-.357-1.103.248-2.286 1.351-2.643 1.103-.356 2.286.248 2.643 1.35.356 1.103-.249 2.287-1.351 2.643zm25.43.143c-1.104.357-2.286-.248-2.645-1.35-.356-1.103.248-2.286 1.352-2.642 1.102-.357 2.286.247 2.643 1.35.357 1.102-.249 2.285-1.35 2.642z"/></svg>
       </div>
     </div>
-    <div class="section43">
-      <div class="blur">
-        <div class="blur2"></div>
-        <div class="blur3"></div>
-        <div class="blur1"></div>
+    <div class="clappr-ws__section clappr-ws__section--customize-third">
+      <div class="clappr-ws__blur-theme">
+        <div class="clappr-ws__blur clappr-ws__blur--second"></div>
+        <div class="clappr-ws__blur clappr-ws__blur--third"></div>
+        <div class="clappr-ws__blur clappr-ws__blur--first"></div>
       </div>
     </div>
 
     <!--------------- SECTION 5 - MULTIDEVICE -------------->
-    <div id="5" class="section5">
-      <div class="multidevice">
-        <h2>Play anywhere</h2>
-        <p>Clappr is HTML5 first and uses most modern technologies to deliver your media across <b>Smartphones</b>, <b>Tablets</b>, <b>Desktops</b> and <b>TV's</b>.</p>
+    <div id="5" class="clappr-ws__section clappr-ws__section--multidevice">
+      <div class="clappr-ws__multidevice-container">
+        <h2 class="clappr-ws__title clappr-ws__title--multidevice">Play anywhere</h2>
+        <p class="clappr-ws__text clappr-ws__text--multidevice">Clappr is HTML5 first and uses most modern technologies to deliver your media across <b>Smartphones</b>, <b>Tablets</b>, <b>Desktops</b> and <b>TV's</b>.</p>
       </div>
-      <img class="imgdevice" src="images/imgmulti.png">
+      <img class="clappr-ws__multidevice-image" src="images/imgmulti.png">
     </div>
 
     <!--------------- SECTION 6 - PLUGINS -------------->
-    <div id="6" class="section6">
-      <div class="plugins">
-        <h2>Add more to your Clappr</h2>
-        <p>Check out the official plugins for your player</p>
-        <div class="cardlist">
-          <a class="card">
-            <div class="ficha"></div>
-            <h3>RTMP</h3>
-            <p>Adds support playback using RTMP Protocol</p>
-            <span>See on github<hr></span>
+    <div id="6" class="section6 clappr-ws__section clappr-ws__section--plugins">
+      <div class="clappr-ws__plugins-container">
+        <h2 class="clappr-ws__title clappr-ws__title--plugins">Add more to your Clappr</h2>
+        <p class="clappr-ws__text">Check out the official plugins for your player</p>
+        <div class="clappr-ws__cardlist">
+          <a class="clappr-ws__card">
+            <div class="clappr-ws__card-description"></div>
+            <h3 class="clappr-ws__card-title">RTMP</h3>
+            <p class="clappr-ws__text clappr-ws__text--cards">Adds support playback using RTMP Protocol</p>
+            <span class="clappr-ws__card-text">See on github<hr class="clappr-ws__card-anim"></span>
           </a>
-          <a class="card">
-            <div class="ficha"></div>
-            <h3>Level Selector</h3>
-            <p>Adds Level Selector using adaptive stream</p>
-            <span>See on github<hr></span>
+          <a class="clappr-ws__card">
+            <div class="clappr-ws__card-description"></div>
+            <h3 class="clappr-ws__card-title">Level Selector</h3>
+            <p class="clappr-ws__text clappr-ws__text--cards">Adds Level Selector using adaptive stream</p>
+            <span class="clappr-ws__card-text">See on github<hr class="clappr-ws__card-anim"></span>
           </a>
-          <a class="card">
-            <div class="ficha"></div>
-            <h3>Speech Control</h3>
-            <p>Basic control playback using voice</p>
-            <span>See on github<hr></span>
+          <a class="clappr-ws__card">
+            <div class="clappr-ws__card-description"></div>
+            <h3 class="clappr-ws__card-title">Speech Control</h3>
+            <p class="clappr-ws__text clappr-ws__text--cards">Basic control playback using voice</p>
+            <span class="clappr-ws__card-text">See on github<hr class="clappr-ws__card-anim"></span>
           </a>
-          <a class="card">
-            <div class="ficha"></div>
-            <h3>YouTube Support</h3>
-            <p>Adds support videos and playlists playback to YouTube</p>
-            <span>See on github<hr></span>
+          <a class="clappr-ws__card">
+            <div class="clappr-ws__card-description"></div>
+            <h3 class="clappr-ws__card-title">YouTube Support</h3>
+            <p class="clappr-ws__text clappr-ws__text--cards">Adds support videos and playlists playback to YouTube</p>
+            <span class="clappr-ws__card-text">See on github<hr class="clappr-ws__card-anim"></span>
           </a>
-          <a class="card">
-            <div class="ficha"></div>
-            <h3>DASH</h3>
-            <p>Adds support videos playback using MPEG DASH technology</p>
-            <span>See on github<hr></span>
+          <a class="clappr-ws__card">
+            <div class="clappr-ws__card-description"></div>
+            <h3 class="clappr-ws__card-title">DASH</h3>
+            <p class="clappr-ws__text clappr-ws__text--cards">Adds support videos playback using MPEG DASH technology</p>
+            <span class="clappr-ws__card-text">See on github<hr class="clappr-ws__card-anim"></span>
           </a>
         </div>
       </div>
     </div>
 
     <!--------------- SECTION 7 - CREDITS -------------->
-    <div id="7" class="section7">
-      <div class="credits">
-        <div class="category">
-          <span>Design & Front-End</span>
-          <ul>
-            <a>Felipe Victor<hr></a>
-            <a>Karina Sirqueira<hr></a>
+    <div id="7" class="clappr-ws__section clappr-ws__section--credits">
+      <div class="clappr-ws__credits-container">
+        <div class="clappr-ws__credits-category">
+          <span class="clappr-ws__credits-text">Design & Front-End</span>
+          <ul class="clappr-ws__credits-list">
+            <a class="clappr-ws__credits-contrib">Felipe Victor<hr class="clappr-ws__credits-anim"></a>
+            <a class="clappr-ws__credits-contrib">Karina Sirqueira<hr class="clappr-ws__credits-anim"></a>
           </ul>
         </div>
-        <div class="category">
-          <span>Video Opening</span>
-          <ul>
-            <a>Joe Simon<hr></a>
+        <div class="clappr-ws__credits-category">
+          <span class="clappr-ws__credits-text">Video Opening</span>
+          <ul class="clappr-ws__credits-list">
+            <a class="clappr-ws__credits-contrib">Joe Simon<hr class="clappr-ws__credits-anim"></a>
           </ul>
         </div>
-        <div class="category">
-          <span>Software Engineer</span>
-            <ul>
-              <a>Alvyn McQuitty<hr></a>
-              <a>Bernardo Camilo<hr></a>
-              <a>Daniel Filho<hr></a>
-              <a>Flávio Ribeiro<hr></a>
-              <a>Jérôme Denis<hr></a>
-              <a>Rafael Pereira<hr></a>
-              <a>Guilherme Bruzzi<hr></a>
-              <a>Leandro Moreira<hr></a>
-              <a>Rheber<hr></a>
-              <a>Thiago Pontes<hr></a>
-              <a>Bruno Torres<hr></a>
-              <a>Gustavo Barbosa<hr></a>
-              <a>Lewis Cowper<hr></a>
-              <a>Robert Nagy<hr></a>
-              <a>Sander Van Schoote<hr></a>
-              <a>Sean Hussey<hr></a>
-              <a>Quentin V<hr></a>
-              <a>Henrik Lundgren<hr></a>
+        <div class="clappr-ws__credits-category">
+          <span class="clappr-ws__credits-text">Software Engineer</span>
+            <ul class="clappr-ws__credits-list">
+              <a class="clappr-ws__credits-contrib">Alvyn McQuitty<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Bernardo Camilo<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Daniel Filho<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Flávio Ribeiro<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Jérôme Denis<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Rafael Pereira<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Guilherme Bruzzi<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Leandro Moreira<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Rheber<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Thiago Pontes<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Bruno Torres<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Gustavo Barbosa<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Lewis Cowper<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Robert Nagy<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Sander Van Schoote<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Sean Hussey<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Quentin V<hr class="clappr-ws__credits-anim"></a>
+              <a class="clappr-ws__credits-contrib">Henrik Lundgren<hr class="clappr-ws__credits-anim"></a>
             </ul>
         </div>
       </div>
     </div>
 
-    <a class="leftmenu">
-      <div class="icon">
-        <svg class="burger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 32"><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="9" x2="37" y2="9"/><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="16" x2="37" y2="16"/><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="23" x2="37" y2="23"/></svg>
-      </div>
+    <a class="clappr-ws__closed-menu">
+      <svg class="clappr-ws__burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 32"><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="9" x2="37" y2="9"/><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="16" x2="37" y2="16"/><line fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13" y1="23" x2="37" y2="23"/></svg>
     </a>
 
-    <div class="leftmenu-open none">
-      <div class="protection-menu"></div>
-      <div class="menu">
-        <ul>
-          <a href="https://github.com/clappr/clappr"><li>Repository</li></a>
-          <a href="https://github.com/clappr/clappr"><li>Documentation</li></a>
-          <hr>
-          <a href="#1"><li>Introduction</li></a>
-          <a href="#2"><li>Get Started</li></a>
-          <a href="#3"><li>Extensible</li></a>
-          <a href="#4"><li>Customizable</li></a>
-          <a href="#5"><li>Multidevice</li></a>
-          <a href="#6"><li>Official Plugins</li></a>
-          <a href="#7"><li>Credits</li></a>
+    <div class="clappr-ws__open-menu none">
+      <div class="clappr-ws__side-menu"></div>
+      <div class="clappr-ws__menu">
+        <ul class="clappr-ws__menu-list">
+          <a class="clappr-ws__menu-link" href="https://github.com/clappr/clappr"><li>Repository</li></a>
+          <a class="clappr-ws__menu-link" href="https://github.com/clappr/clappr"><li>Documentation</li></a>
+          <hr class="clappr-ws__menu-separator">
+          <a class="clappr-ws__menu-link" href="#1"><li>Introduction</li></a>
+          <a class="clappr-ws__menu-link" href="#2"><li>Get Started</li></a>
+          <a class="clappr-ws__menu-link" href="#3"><li>Extensible</li></a>
+          <a class="clappr-ws__menu-link" href="#4"><li>Customizable</li></a>
+          <a class="clappr-ws__menu-link" href="#5"><li>Multidevice</li></a>
+          <a class="clappr-ws__menu-link" href="#6"><li>Official Plugins</li></a>
+          <a class="clappr-ws__menu-link" href="#7"><li>Credits</li></a>
         </ul>
       </div>
     </div>
 
-    <div class="loader">
-      <div class="bg"></div>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <div class="clappr-ws__loader">
+      <div class="clappr-ws__loader-background"></div>
+        <svg version="1.1" id="Layer_1" class="clappr-ws__loader-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="60px" height="60px" viewBox="0 0 60 60" enable-background="new 0 0 60 60" xml:space="preserve">
           <circle fill="#FFFFFF" cx="30" cy="30" r="30"/>
         </svg>
