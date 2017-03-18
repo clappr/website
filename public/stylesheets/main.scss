@@ -917,7 +917,7 @@
 
   &__credits-container {
   	position: relative;
-  	padding: 150px 0 130px;
+  	padding: 80px 0 0;
   }
 
   &__credits-text {
@@ -945,6 +945,7 @@
   	display: block;
   	font-style: italic;
   	text-align: left;
+    text-decoration: none;
   	display: block;
   	font-weight: 900;
   	font-size: 19px;
