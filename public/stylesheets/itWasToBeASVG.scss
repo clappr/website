@@ -1,0 +1,114 @@
+@import "compass/css3";
+
+.v {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.empty {
+  position: absolute;
+  width: 100.8%;
+  height: 101%;
+  margin: 0 auto;
+  top: -0.5%;
+  left: -0.4%;
+  @include box-sizing(border-box);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .7);
+  opacity: 0;
+  @include transition(all 0.5s);
+}
+
+.lines {
+	opacity: 0.3;
+}
+
+.empty .vt {
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	border: none;
+	background-color: white;
+	margin: 0;
+}
+
+.empty .c1 {
+	left: 11.11%;
+}
+.empty .c2 {
+	left: 22.22%;
+}
+.empty .c3 {
+	left: 33.33%;
+}
+.empty .c4 {
+	left: 44.44%;
+}
+.empty .c5 {
+	left: 55.55%;
+}
+.empty .c6 {
+	left: 66.66%;
+}
+.empty .c7 {
+	left: 77.77%;
+}
+.empty .c8 {
+	left: 88.88%;
+}
+
+.empty .hz {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	border: none;
+	background-color: white;
+	margin: 0;
+}
+
+.empty .l1 {
+	top: 16.66%;
+}
+.empty .l2 {
+	top: 33.33%;
+}
+.empty .l3 {
+	top: 50%;
+}
+.empty .l4 {
+	top: 66.66%;
+}
+.empty .l5 {
+	top: 83.33%;
+}
+
+.empty .square {
+	position: absolute;
+	background-color: white;
+	width: 11.11%;
+	height: 16.66%;
+	opacity: 0.4;
+}
+
+.empty .s1 {
+	left: 11.11%;
+}
+.empty .s2 {
+	left: 11.11%;
+	top: 33.33%;
+}
+.empty .s3 {
+	left: 22.22%;
+	top: 83.33%;
+}
+.empty .s4 {
+	left: 77.77%;
+	top: 66.66%;
+}
+.empty .s5 {
+	left: 77.77%;
+	top: 16.66%;
+}

@@ -1,0 +1,58 @@
+@import "compass/css3";
+
+.show {
+	opacity: 1;
+  @include transform(translate(0, -50%) scale(1));
+}
+
+.giro-in {
+	opacity: 1 !important;
+  @include transform(translate(-50%, -50%) rotateY(0) !important);
+}
+
+.giro-out {
+	opacity: 0;
+  @include transform(translate(0, -50%) rotateY(90deg));
+}
+
+.show2 {
+	opacity: 1;
+}
+
+.baixo {
+	top: 59% !important;
+  @include transition(all 0.5s ease !important);
+}
+
+.bgblack {
+	background-color: #232323;
+}
+
+.customize-video {
+  width: 45% !important;
+  height: 28vw !important;
+  top: 50% !important;
+  left: 50% !important;
+  @include transform(translate(0, -42%) !important);
+  @include transition(all 0.5s ease !important);
+
+	@media (max-width: 800px) {
+		position: relative;
+		width: 100%;
+		left: 0;
+	  @include transform(none);
+	}
+}
+
+.multidevice-video {
+  position: fixed;
+  width: 72vh !important;
+  height: 41vh !important;
+  top: 40.3vh !important;
+  @include transform(translate(-50%, 0%) !important);
+  @include transition(all 0.5s ease !important);
+}
+
+.none {
+	display: none;
+}

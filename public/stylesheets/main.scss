@@ -85,7 +85,14 @@
       font-size: 10vw;
       margin: 0 auto 36px;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
+      font-size: 18.5vmin;
+      text-align: left;
+      letter-spacing: -0.6vmin;
+      margin: 0 0 9vh;
+      width: 86%;
+    }
+    @media (max-width: 799px) {
       font-size: 7vw;
       width: 80%;
       letter-spacing: -2px;
@@ -108,7 +115,7 @@
       font-size: 5.6vw;
       @include transition(all 1s);
 
-      @media (max-width: 800px) {
+      @media (max-width: 799px) {
         font-size: 7vw;
         width: 80%;
         letter-spacing: -2px;
@@ -138,7 +145,7 @@
   	line-height: 142%;
   	margin-bottom: calc(1.7410714285714286vw + 14.428571428571429px);
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
     	width: 80%;
     	font-size: 24px;
     }
@@ -166,7 +173,7 @@
       @media (max-width: 500px) {
         margin-bottom: 10%;
       }
-      @media (max-width: 800px) {
+      @media (max-width: 799px) {
         text-align: center;
         width: 80%;
         margin: 0 auto 3%;
@@ -206,6 +213,10 @@
     opacity: 0;
     @include custom-animation(fadein, 4s, 3.4s, ease, 1, alternate, forwards);
 
+    @media (max-width: 700px) {
+      display: none;
+    }
+
     video {
       object-fit: initial;
     }
@@ -231,9 +242,17 @@
     padding: 3% 4% 3% 3%;
     @include custom-animation(headerdown, 1s, 9.2s, ease, 1, alternate, forwards);
 
-    @media (max-width: 800px) {
+
+    @media (max-width: 700px) {
+      opacity: 0;
+       @include custom-animation(none, 0, 0.5s !important);
+       @include transition(all 0.5s);
+    }
+    @media (max-width: 799px) {
+      opacity: 1;
       padding: 3% 8%;
       width: 84%;
+      @include custom-animation(fadein !important);
     }
 
     &-svg {
@@ -245,14 +264,21 @@
       opacity: 0;
       @include custom-animation(fadein, 2s, 9s, ease, 1, alternate, forwards);
 
-      @media (max-width: 1100px) {
-      	width: 20%;
-      }
-      @media (max-width: 800px) {
-        width: 25%;
-      }
       @media (max-width: 500px) {
       	width: 45%;
+      }
+      @media (max-width: 700px) {
+       margin-left: 0 !important;
+       height: 16vw !important;
+       width: 45% !important;
+       @include custom-animation(none, 0, 1.1s !important);
+      }
+      @media (max-width: 799px) {
+        @include custom-animation(fadein);
+        width: 25%;
+      }
+      @media (max-width: 1100px) {
+        width: 20%;
       }
     }
   }
@@ -275,6 +301,10 @@
     z-index: 2;
     width: 520px;
     height: 300px;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   &__sprite {
@@ -283,6 +313,10 @@
     height: 300px;
     background-size: cover;
     @include custom-animation(animate-logo, 6s, 0.5s, steps(202), 1, normal, forwards, running, fadeout, 1s, 7.6s, ease);
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   &__branding {
@@ -294,11 +328,28 @@
   	top: 48%;
     @include transform(translate(0, -50%));
     @include custom-animation(moveup, 1s, 8s, cubic-bezier(0.32, 0.02, 0, 0.99), 1, alternate, forwards);
+
+    @media (max-width: 700px) {
+      text-align: left;
+      width: 90%;
+      margin: 0 5%;
+      @include custom-animation(none, 0, 0.5s !important);
+    }
+    @media (max-width: 799px) {
+      @include custom-animation(moveup);
+    }
   }
 
   &__branding-text {
   	 opacity: 0;
      @include custom-animation(fadein, 1.5s, 8s, ease, 1, alternate, forwards);
+
+     @media (max-width: 700px) {
+        @include custom-animation(none, 0, 0.5s !important);
+     }
+     @media (max-width: 799px) {
+        @include custom-animation(fadein !important);
+     }
   }
 
   &__branding-button {
@@ -425,7 +476,7 @@
 
   &__boxcode {
     border: solid 1px #ccc;
-    max-width: 800px;
+    max-width: 799px;
     width: 80%;
     margin: -1px auto 0;
     @include box-sizing(border-box);
@@ -465,7 +516,7 @@
     @include transition(all 0.5s ease-out);
     will-change: transform;
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       width: 90%;
     }
   }
@@ -537,7 +588,6 @@
     z-index: 2;
     top: 50%;
     left: 50%;
-    // width: -moz-calc(90vw - 90px);
     width: calc(90vw - 90px);
     vertical-align: middle;
     opacity: 0;
@@ -552,7 +602,7 @@
     vertical-align: top;
     margin-right: 4%;
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       display: block;
       width: 100%;
       margin-bottom: 13%;
@@ -560,7 +610,7 @@
   }
 
   &__circles {
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
   		margin: 0 auto;
   		width: 25.6vw;
     }
@@ -580,7 +630,7 @@
     padding: 11px 13px 12px 10px;
     text-align: center;
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
   		font-size: 4.3vw;
   		width: 6vw;
   		height: 6vw;
@@ -590,6 +640,18 @@
 
     &--to-left {
       margin-left: 0;
+    }
+    &--blue {
+    	background-color: white;
+    	color: #1455ff;
+    }
+    &--yellow {
+    	background-color: white;
+    	color: #ffcc00;
+    }
+    &--purple {
+    	background-color: white;
+    	color: #9740c9;
     }
   }
 
@@ -607,6 +669,69 @@
 
     svg {
       position: absolute;
+    }
+  }
+
+  &__first-cloud-anim {
+  	left: -20%;
+    top: 17%;
+    z-index: 2;
+    width: 45%;
+    height: auto;
+    @include filter(drop-shadow(-10px 20px 10px rgba(0, 0, 0, .4)));
+    @include custom-animation(nuvem, 40s, 0s, linear, infinite, normal, forwards);
+
+    @media (max-width: 799px) {
+      left: -5%;
+      top: 57%;
+      width: 31%;
+    }
+  }
+
+  &__second-cloud-anim {
+    left: 55%;
+    top: -18%;
+    z-index: 7;
+    width: 54%;
+    height: auto;
+    @include filter(drop-shadow(-10px 20px 6px rgba(0, 0, 0, .3)));
+    @include custom-animation(nuvem2, 60s, 0s, ease, infinite, normal, forwards);
+
+    @media (max-width: 799px) {
+      left: 57%;
+  		top: 37%;
+  		width: 37%;
+    }
+  }
+
+  &__third-cloud-anim {
+  	left: 85%;
+    top: 51%;
+    z-index: 2;
+    width: 26%;
+    @include filter(drop-shadow(6px 6px 6px rgba(0, 0, 0, .4)));
+    @include custom-animation(nuvem, 100s, 0s, linear, infinite, normal, forwards);
+
+    @media (max-width: 799px) {
+      left: 84%;
+  		top: 54%;
+  		width: 22%;
+    }
+  }
+
+  &__sun-anim {
+    left: 12%;
+    top: -34%;
+    z-index: 2;
+    width: 34%;
+    height: auto;
+    @include filter(drop-shadow(8px 10px 16px rgba(0, 0, 0, .1)));
+    @include custom-animation(sol, 1.6s, 0s, ease, infinite, normal, forwards);
+
+    @media (max-width: 799px) {
+      left: 9%;
+  		top: 32%;
+  		width: 25%;
     }
   }
 
@@ -676,7 +801,7 @@
     @include transform(translate(-50%, 0%));
     will-change: opacity;
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       width: 158%;
     }
   }
@@ -690,13 +815,13 @@
     text-align: center;
     @include transform(translate(0,-50%));
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       top: 50%;
     }
   }
 
   &__cardlist {
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       text-align: left;
   	  width: 90%;
   	  margin: 0 auto;
@@ -713,6 +838,12 @@
     vertical-align: top;
     padding-left: 1.6%;
     @include transition(all 0.2s);
+
+    @media (max-width: 799px) {
+      width: 29.9%;
+      margin-bottom: 3px;
+      padding-left: 3%;
+    }
 
     &:hover {
       box-shadow: 0 0 0 3px #1455ff;
@@ -734,12 +865,6 @@
       	opacity: 1;
       	background-color: #1455ff;
       }
-    }
-
-    @media (max-width: 800px) {
-      width: 29.9%;
-      margin-bottom: 3px;
-      padding-left: 3%;
     }
   }
 
@@ -764,7 +889,7 @@
     margin: 0 auto;
     @include transition(all 0.2s);
 
-    @media (max-width: 800px) {
+    @media (max-width: 799px) {
       font-size: 4.6vw;
     }
   }
@@ -986,269 +1111,4 @@
   	opacity: 0.2;
     @include background(linear-gradient(135deg, rgba(0,127,101,1) 0%,rgba(11,47,140,1) 100%));
   }
-}
-
-.v {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: auto;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.empty {
-  position: absolute;
-  width: 100.8%;
-  height: 101%;
-  margin: 0 auto;
-  top: -0.5%;
-  left: -0.4%;
-  @include box-sizing(border-box);
-  z-index: 1;
-  background-color: rgba(0, 0, 0, .7);
-  opacity: 0;
-  @include transition(all 0.5s);
-}
-
-.lines {
-	opacity: 0.3;
-}
-
-.empty .vt {
-	position: absolute;
-	width: 1px;
-	height: 100%;
-	border: none;
-	background-color: white;
-	margin: 0;
-}
-
-.empty .c1 {
-	left: 11.11%;
-}
-.empty .c2 {
-	left: 22.22%;
-}
-.empty .c3 {
-	left: 33.33%;
-}
-.empty .c4 {
-	left: 44.44%;
-}
-.empty .c5 {
-	left: 55.55%;
-}
-.empty .c6 {
-	left: 66.66%;
-}
-.empty .c7 {
-	left: 77.77%;
-}
-.empty .c8 {
-	left: 88.88%;
-}
-
-.empty .hz {
-	position: absolute;
-	width: 100%;
-	height: 1px;
-	border: none;
-	background-color: white;
-	margin: 0;
-}
-
-.empty .l1 {
-	top: 16.66%;
-}
-.empty .l2 {
-	top: 33.33%;
-}
-.empty .l3 {
-	top: 50%;
-}
-.empty .l4 {
-	top: 66.66%;
-}
-.empty .l5 {
-	top: 83.33%;
-}
-
-.empty .square {
-	position: absolute;
-	background-color: white;
-	width: 11.11%;
-	height: 16.66%;
-	opacity: 0.4;
-}
-
-.empty .s1 {
-	left: 11.11%;
-}
-.empty .s2 {
-	left: 11.11%;
-	top: 33.33%;
-}
-.empty .s3 {
-	left: 22.22%;
-	top: 83.33%;
-}
-.empty .s4 {
-	left: 77.77%;
-	top: 66.66%;
-}
-.empty .s5 {
-	left: 77.77%;
-	top: 16.66%;
-}
-
-.blue {
-	background-color: white;
-	color: #1455ff;
-}
-
-.yellow {
-	background-color: white;
-	color: #ffcc00;
-}
-
-.purple {
-	background-color: white;
-	color: #9740c9;
-}
-
-#nuvem1 {
-	left: -20%;
-  top: 17%;
-  z-index: 2;
-  width: 45%;
-  height: auto;
-  @include filter(drop-shadow(-10px 20px 10px rgba(0, 0, 0, .4)));
-  @include custom-animation(nuvem, 40s, 0s, linear, infinite, normal, forwards);
-
-  @media (max-width: 800px) {
-    left: -5%;
-    top: 57%;
-    width: 31%;
-  }
-}
-
-#nuvem2 {
-  left: 55%;
-  top: -18%;
-  z-index: 7;
-  width: 54%;
-  height: auto;
-  @include filter(drop-shadow(-10px 20px 6px rgba(0, 0, 0, .3)));
-  @include custom-animation(nuvem2, 60s, 0s, ease, infinite, normal, forwards);
-
-  @media (max-width: 800px) {
-    left: 57%;
-		top: 37%;
-		width: 37%;
-  }
-}
-
-#nuvem3 {
-	left: 85%;
-  top: 51%;
-  z-index: 2;
-  width: 26%;
-  @include filter(drop-shadow(6px 6px 6px rgba(0, 0, 0, .4)));
-  @include custom-animation(nuvem, 100s, 0s, linear, infinite, normal, forwards);
-
-  @media (max-width: 800px) {
-    left: 84%;
-		top: 54%;
-		width: 22%;
-  }
-}
-
-#sol {
-  left: 12%;
-  top: -34%;
-  z-index: 2;
-  width: 34%;
-  height: auto;
-  @include filter(drop-shadow(8px 10px 16px rgba(0, 0, 0, .1)));
-  @include custom-animation(sol, 1.6s, 0s, ease, infinite, normal, forwards);
-
-  @media (max-width: 800px) {
-    left: 9%;
-		top: 32%;
-		width: 25%;
-  }
-}
-
-@media (max-width: 700px) {
-	#bgvideo {
-		display: none;
-	}
-
-	h2 {
-    font-style: italic;
-    font-weight: 200;
-    font-size: 18.5vmin;
-    text-align: left;
-    letter-spacing: -0.6vmin;
-    color: white;
-    line-height: 100%;
-    margin: 0 0 9vh;
-    width: 86%;
-	}
-
-	.future {
-		text-align: left;
-		width: 90%;
-    margin: 0 5%;
-    @include custom-animation(none, 0, 0.5s !important);
-	}
-
-	.future-active {
-    @include custom-animation(moveup);
-	}
-
-	 #logo {
-	 	margin-left: 0 !important;
-    height: 16vw !important;
-    width: 45% !important;
-    @include custom-animation(none, 0, 1.1s !important);
-	 }
-
-	 .logo-active {
-     @include custom-animation(fadein);
-	 }
-
-	 header {
-     opacity: 0;
-     @include custom-animation(none, 0, 0.5s !important);
-     @include transition(all 0.5s);
-	 }
-
-	 .header-active {
-     @include custom-animation(fadein !important);
-	   opacity: 1;
-	 }
-
-	 .future h2 {
-     @include custom-animation(none, 0, 0.5s !important);
-	 }
-
-	 .h2-active {
-     @include custom-animation(fadein !important);
-	 }
-
-	 .future .bt_github {
-     @include custom-animation(none, 0, 0.5s !important);
-	 }
-
-	 .bt_github-active {
-     @include custom-animation(fadein !important);
-	 }
-
-   .sprite {
-     display: none;
-   }
-   .logo {
-     display: none;
-   }
 }
