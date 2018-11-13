@@ -4,8 +4,8 @@
   "description": "An extensible media player for applications",
   "main": ".public/js/clappr-website.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --optimize-dedupe --optimize-occurence-order --content-base public/ --output-public-path latest/ --hot --host 0.0.0.0",
-    "release": "webpack"
+    "start": "node_modules/.bin/webpack-dev-server --optimize-dedupe --optimize-occurence-order --content-base public/ --output-public-path latest/ --hot --host 0.0.0.0 --port 8089",
+    "build": "webpack"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

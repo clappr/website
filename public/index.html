@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <title>Clappr</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.plainhtml5.min.js"></script>
     <script type="text/javascript" src="vendors/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="clappr-website.js"></script>
 
@@ -13,7 +13,18 @@
     <!------------ 1 - APRESENTAÇÃO ------------>
     <div id="1" class="clappr-ws__section clappr-ws__section--presentation">
       <div id="bgvideo" class="clappr-ws__player clappr-ws__presentation-video">
-        <script>var player = new Clappr.Player({source: "media/video.mp4", parentId:"#bgvideo", width: "100%", height: "100%", autoPlay: true, loop: true, chromeless: true, mute: true});</script>
+        <script>
+          var player = new Clappr.Player({
+            source: "media/video.mp4",
+            parentId:"#bgvideo",
+            width: "100%",
+            height: "100%",
+            autoPlay: true,
+            loop: true,
+            // chromeless: true,
+            mute: true
+          });
+        </script>
       </div>
       <div class="clappr-ws__gradient"></div>
       <div class="clappr-ws__after-logo">
@@ -91,7 +102,17 @@
             </div>
           </div>
           <div id="player" class="clappr-ws__player"></div>
-          <script>var player = new Clappr.Player({source: "media/video.mp4", parentId: "#player", width: "100%", height: "100%", autoPlay: true, loop: true, hideMediaControl: false});</script>
+          <script>var player = new Clappr.Player({
+            source: "media/video.mp4",
+            parentId: "#player",
+            width: "100%",
+            height: "100%",
+            autoPlay: true,
+            loop: true,
+            hideMediaControl: false,
+            mute: true
+          });
+          </script>
         </div>
       </div>
     </div>

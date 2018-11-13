@@ -216,7 +216,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--get-started",
       triggerHook: 0,
-      offset: -500    // start this scene after scrolling for 50px
+      offset: -500
     })
     .on('enter', showIn)
     .on('leave', showOut)
@@ -225,7 +225,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--running-example",
       triggerHook: 0,
-      offset: 0    // start this scene after scrolling for 50px
+      offset: 0
     })
     .on('enter', giroIn)
     .on('leave', giroOut)
@@ -234,7 +234,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--open-source",
       triggerHook: 0,
-      offset: -1    // start this scene after scrolling for 50px
+      offset: -1
     })
     .on('enter', show2In)
     .on('leave', show2Out)
@@ -243,7 +243,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--customize-first",
       triggerHook: 0,
-      offset: -1    // start this scene after scrolling for 50px
+      offset: -1
     })
     .on('enter', customize1In)
     .on('leave', customize1Out)
@@ -252,7 +252,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--customize-second",
       triggerHook: 0,
-      offset: 0    // start this scene after scrolling for 50px
+      offset: 0
     })
     .on('enter', customize2In)
     .on('leave', customize2Out)
@@ -261,7 +261,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--customize-third",
       triggerHook: 0,
-      offset: 0    // start this scene after scrolling for 50px
+      offset: 0
     })
     .on('enter', customize3In)
     .on('leave', customize3Out)
@@ -270,7 +270,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--customize-third",
       triggerHook: 0,
-      offset: $(window).height()/2    // start this scene after scrolling for 50px
+      offset: $(window).height()/2
     })
     .on('enter', multidevice)
     .on('leave', multidevice)
@@ -279,7 +279,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--presentation",
       triggerHook: 0,
-      offset: $(window).height()/2    // start this scene after scrolling for 50px
+      offset: $(window).height()/2
     })
     .on('enter', menublack)
     .on('enter', fadescrollIn)
@@ -290,7 +290,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--multidevice",
       triggerHook: 0,
-      offset: $(window).height()/2    // start this scene after scrolling for 50px
+      offset: $(window).height()/2
     })
     .on('enter', menublack)
     .on('leave', menuwhite)
@@ -299,7 +299,7 @@ $(window).load(function() {
     new ScrollMagic.Scene({
       triggerElement:".clappr-ws__section--plugins",
       triggerHook: 0,
-      offset: $(window).height()/2    // start this scene after scrolling for 50px
+      offset: $(window).height()/2
     })
     .on('enter', menuwhite)
     .on('leave', menublack)
@@ -318,25 +318,4 @@ $(window).load(function() {
       }
     }
   });
-
-  //tentando fazer o smooth scrolling sem JQuery /:
-  // var sections = document.querySelectorAll('a[href*="#"]:not([href="#"])');
-  // for(var section of sections) {
-  //   section.addEventListener('click', function() {
-  //     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-  //       var target = document.getElementById(this.hash.slice(1));
-  //       if (target) {
-  //         var keyframes = [
-  //           {scrollTop: target.offsetTop, easing: 'ease-out'}
-  //         ];
-  //         var animateOptions = {
-  //           duration:1000,
-  //           iterations: Infinity
-  //         };
-  //         document.body.animate(keyframes, animateOptions);
-  //         return false;
-  //       }
-  //     }
-  //   });
-  // };
 });
