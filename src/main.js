@@ -1,6 +1,6 @@
-require('./../stylesheets/main.scss')
-require('./../stylesheets/itWasToBeASVG.scss')
-require('./../stylesheets/scroll-anim.scss')
+require('./stylesheets/main.scss')
+require('./stylesheets/itWasToBeASVG.scss')
+require('./stylesheets/scroll-anim.scss')
 
 $(window).load(function() {
   $('.clappr-ws__loader').attr('style', 'opacity: 0;');

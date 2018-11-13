@@ -2,7 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'public/js/main.js'),
+  entry: path.resolve(__dirname, 'src/main.js'),
   plugins: [
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(require('./package.json').version)
@@ -26,6 +26,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'clappr-website.js'
+    filename: 'clappr-website.min.js'
   }
 }
